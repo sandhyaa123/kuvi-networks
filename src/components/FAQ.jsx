@@ -39,6 +39,11 @@ const Faq = () => {
       answer:
         "Our flexible model allows you to expand or reduce your team easily based on your needs.",
     },
+    {
+      question: "Do I need to register my company in India?",
+      answer:
+        "If your company is already registered in India, we assist with the setup process. If not, we are here to help you with company registration and all necessary formalities.",
+    },
   ];
 
   const handleToggle = (index) => {

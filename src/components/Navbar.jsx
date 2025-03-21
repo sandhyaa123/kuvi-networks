@@ -27,10 +27,8 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Attach event listener to detect clicks outside the menu
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      // Clean up the event listener on component unmount
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
@@ -50,7 +48,6 @@ const Navbar = () => {
           </div>
         </Link>
         
-        {/* Toggle Menu */}
         <input 
           type="checkbox" 
           className="hidden peer" 
@@ -66,14 +63,13 @@ const Navbar = () => {
           </div>
         </label>
 
-        {/* Menu Items */}
         <div 
           ref={menuRef} 
           className={`lg:flex lg:flex-row lg:relative lg:top-0 lg:bg-transparent lg:shadow-none lg:mt-0 bg-indigo-50 shadow-lg mt-2 ${isMenuOpen ? 'flex' : 'hidden'} peer-checked:flex flex-col items-center absolute top-16 left-0 right-0 z-50 transition-all duration-300 pb-2 lg:pb-0`}>
           
           <Link 
             to="/" 
-            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 hover:underline transition duration-200"
+            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
             onClick={handleMenuItemClick}
           >
             Home
@@ -81,15 +77,15 @@ const Navbar = () => {
 
           <Link 
             to="/how-it-works" 
-            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 hover:underline transition duration-200"
+            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
             onClick={handleMenuItemClick}
           >
             How it works
           </Link>
 
           <Link 
-            to="/why-us" 
-            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 hover:underline transition duration-200"
+            to="/services" 
+            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
             onClick={handleMenuItemClick}
           >
            Our services
@@ -97,20 +93,28 @@ const Navbar = () => {
 
           <Link 
             to="/why-us" 
-            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 hover:underline transition duration-200"
+            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
             onClick={handleMenuItemClick}
           >
             Why us
           </Link>
-          <a 
-            href="https://forms.gle/sh68Te2Z5ZtoFsgt6" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 hover:underline transition duration-200"
+
+          <Link 
+            to="/join-us" 
+            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
             onClick={handleMenuItemClick}
           >
             Join us
-          </a>
+          </Link>
+          {/* <a 
+            href="https://forms.gle/sh68Te2Z5ZtoFsgt6" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
+            onClick={handleMenuItemClick}
+          >
+            Join us
+          </a> */}
 
           <a
             href="https://calendly.com/kuvi-networks/explore-kuvi-networks"  

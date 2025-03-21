@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { 
     Hero,
     HowItWorks,
@@ -10,8 +11,15 @@ import {
     Paragraph
  } from "../components";
 
-
+import { Link } from "react-router-dom";
 const Home = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  },[]);
   return (
     <div className="bg-white">
       <Hero />
@@ -60,6 +68,14 @@ const Home = () => {
 
 </div>
 
+        </div>
+        <div className="w-full flex items-center justify-center mt-8">
+        <Link 
+            to="/why-us" 
+            className="m-2 inline-flex border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-50 hover:bg-indigo-700 hover:text-indigo-50 transition-all duration-300 transform hover:scale-105 justify-center rounded-md py-3 px-8  text-base font-medium text-indigo-900 shadow-md"
+            >
+            Know more
+          </Link>
         </div>
       </section>
       <Testimonal />

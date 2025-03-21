@@ -1,27 +1,26 @@
+import { useEffect } from "react";
 import { Heading, LabelHeading, Paragraph } from "../components";
 
 const WhyChooseUs = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
   return (
     <div className="bg-white min-h-screen w-screen">
       <section className="mx-auto px-4 sm:px-6 lg:px-0 py-16 max-w-7xl">
         <div className="text-center mb-20">
-          {/* <p className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
-            Why Choose Us
-          </p> */}
           <Heading>Why choose us</Heading>
-          {/* <p className="text-xl text-gray-600 mx-auto max-w-3xl">
-            We deliver exceptional value through a unique approach that puts you
-            in control while we handle the complexities.
-          </p> */}
           <Paragraph styleCss={"mx-auto max-w-3xl"}>
             We deliver exceptional value through a unique approach that puts you
             in control while we handle the complexities.
           </Paragraph>
         </div>
         <div className="mb-24">
-          {/* <p className="text-3xl font-bold text-gray-800 text-center mb-12">
-            ⚡ Our Key Differentiators
-          </p> */}
           <div className="mb-12">
             {" "}
             <LabelHeading styleCss="text-gray-800 text-center">
@@ -69,7 +68,6 @@ const WhyChooseUs = () => {
               </Paragraph>
             </div>
 
-            {/* End-to-End Management */}
             <div className="bg-white rounded-xl shadow-lg p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl border-b-4 border-indigo-600">
               <div className="bg-indigo-100 rounded-full w-16 h-16 items-center justify-center mx-auto mb-4 flex">
                 <span className="text-3xl">🔥</span>
@@ -82,7 +80,6 @@ const WhyChooseUs = () => {
               </Paragraph>
             </div>
 
-            {/* Scalable & Flexible */}
             <div className="bg-white rounded-xl shadow-lg p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl border-b-4 border-indigo-600">
               <div className="bg-indigo-100 rounded-full w-16 h-16 items-center justify-center mx-auto mb-4 flex">
                 <span className="text-3xl">📈</span>
@@ -97,9 +94,7 @@ const WhyChooseUs = () => {
           </div>
         </div>
         <div className="mb-24">
-          {/* <p className="text-3xl font-bold text-gray-800 text-center mb-12">
-            ✅ How We Compare to Traditional Agencies
-          </p> */}
+
           <div className="mb-12">
           <LabelHeading styleCss="text-gray-800 text-center"> ✅ How we deliver more value than traditional agencies</LabelHeading>
           </div>

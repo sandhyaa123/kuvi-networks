@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import howWorks from '../assets/images/howWorks.jpeg';
 import talentPool from '../assets/images/talentPool.jpg';
 import teamSupport from '../assets/images/teamSupport.jpg';
@@ -5,6 +6,12 @@ import { Heading, Paragraph } from '../components';
 
 const HowItWorksPage = () => {
     
+   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+   },[]);
     return (
         <div>
     <div className="bg-indigo-600 relative overflow-hidden">

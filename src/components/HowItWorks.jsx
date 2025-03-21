@@ -1,7 +1,7 @@
 import Heading from "./typography/Heading";
 import LabelHeading from "./typography/labelHeading";
 import Paragraph from "./typography/paragraph";
-
+import { Link } from "react-router-dom";
 const HowItWorks = () => {
   return (
     <div className="bg-white min-h-max">
@@ -128,7 +128,27 @@ const HowItWorks = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="w-full flex items-center justify-center mt-8">
+          <Link 
+            to="/how-it-works" 
+            className="m-2 inline-flex border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-50 hover:bg-indigo-700 hover:text-indigo-50 transition-all duration-300 transform hover:scale-105 justify-center rounded-md py-3 px-8  text-base font-medium text-indigo-900 shadow-md"
+          >
+            Know more
+          </Link>
+          
+          {/* <Link 
+            to="/how-it-works" 
+            className="m-2 inline-flex focus:outline-none focus:ring-2 focus:ring-indigo-50 hover:bg-indigo-700 hover:text-indigo-50 transition-all duration-300 transform hover:scale-105 justify-center rounded-md py-3 px-8  text-base font-medium text-indigo-900 shadow-xl"
+          >
+            Know more
+          </Link> */}
+
+          {/* <Link 
+            to="/how-it-works" 
+            className="m-2 inline-flex focus:outline-none focus:ring-2 focus:ring-indigo-50 hover:underline transition-all duration-300 transform hover:scale-105 justify-center rounded-md py-3 px-8  text-base font-medium text-indigo-900"
+          >
+            Know more
+          </Link> */}
         </div>
       </section>
       {/* // no more button - redirect to how it works in all section which having their own page */}
