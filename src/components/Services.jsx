@@ -1,52 +1,61 @@
+import Heading from "./typography/Heading";
+import LabelHeading from "./typography/labelHeading";
+import Paragraph from "./typography/paragraph";
 
-
-const Services = () => ( <section className="py-20 bg-white">
+const Services = () => (
+  <section className="py-20 bg-indigo-50">
     <div className="mx-auto px-6 container">
       <div className="mx-auto text-center mb-16 max-w-3xl">
-        <p className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services – Your End-to-End Team Management
-            Partner</p>
+        <Heading>Our services - Your end-to-end team management partner</Heading>
         <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
       </div>
       <div className="md:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-10">
-        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border
-            border-gray-100">
+        
+        {/* Team Sourcing & Onboarding */}
+        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
           <div className="text-4xl mb-4">🌟</div>
-          <p className="text-xl font-bold text-gray-800 mb-3">Team Sourcing & Onboarding</p>
-          <p className="text-gray-600">We hire and onboard skilled tech and non-tech talent tailored to your needs.</p>
+          <LabelHeading color="text-gray-800">Team sourcing & Onboarding</LabelHeading>
+          <Paragraph>We hire and onboard skilled tech and non-tech talent tailored to your needs.</Paragraph>
         </div>
-        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border
-            border-gray-100">
+
+        {/* HR & Admin Management */}
+        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
           <div className="text-4xl mb-4">📊</div>
-          <p className="text-xl font-bold text-gray-800 mb-3">HR & Admin Management</p>
-          <p className="text-gray-600">From payroll and policies to legal compliance – we handle it all.</p>
+          <LabelHeading color="text-gray-800">HR & Admin management</LabelHeading>
+          <Paragraph>From payroll and policies to legal compliance – we handle it all.</Paragraph>
         </div>
-        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border
-            border-gray-100">
+
+        {/* Finance Management */}
+        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
           <div className="text-4xl mb-4">💸</div>
-          <p className="text-xl font-bold text-gray-800 mb-3">Finance Management</p>
-          <p className="text-gray-600">Seamless processing of salaries, reimbursements, and payslips.</p>
+          <LabelHeading color="text-gray-800">Finance management</LabelHeading>
+          <Paragraph>Seamless processing of salaries, reimbursements, and payslips.</Paragraph>
         </div>
-        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border
-            border-gray-100">
+
+        {/* Infrastructure Support */}
+        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
           <div className="text-4xl mb-4">💻</div>
-          <p className="text-xl font-bold text-gray-800 mb-3">Infrastructure Support</p>
-          <p className="text-gray-600">Office space, equipment, and onboarding kits to empower your team.</p>
+          <LabelHeading color="text-gray-800">Infrastructure support</LabelHeading>
+          <Paragraph>Office space, equipment, and onboarding kits to empower your team.</Paragraph>
         </div>
-        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border
-            border-gray-100">
+
+        {/* Ongoing Team Management */}
+        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
           <div className="text-4xl mb-4">🔥</div>
-          <p className="text-xl font-bold text-gray-800 mb-3">Ongoing Team Management</p>
-          <p className="text-gray-600">Continuous performance monitoring and retention strategies to keep your team
-              motivated.</p>
+          <LabelHeading color="text-gray-800">Ongoing team management</LabelHeading>
+          <Paragraph>Continuous performance monitoring and retention strategies to keep your team motivated.</Paragraph>
         </div>
-        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border
-            border-gray-100">
+
+        {/* Legal & Compliance Support */}
+        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
           <div className="text-4xl mb-4">⚖️</div>
-          <p className="text-xl font-bold text-gray-800 mb-3">Legal & Compliance Support</p>
-          <p className="text-gray-600">We ensure your team adheres to all company regulations and employee contracts.</p>
+          <LabelHeading color="text-gray-800">Legal & Compliance support</LabelHeading>
+          <Paragraph>We ensure your team adheres to all company regulations and employee contracts.</Paragraph>
         </div>
+
       </div>
     </div>
-        </section>)
+  </section>
+);
 
 export default Services;

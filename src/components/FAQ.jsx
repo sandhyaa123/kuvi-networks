@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Heading from "./typography/Heading";
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -38,9 +39,10 @@ const Faq = () => {
     <section className="py-16 md:py-24 bg-white">
       <div className="mx-auto px-4 container w-full">
         <div className="text-center mb-16">
-          <p className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          {/* <p className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Frequently Asked Questions
-          </p>
+          </p> */}
+          <Heading> Frequently asked questions</Heading>
         </div>
         <div className="mx-auto max-w-4xl">
           <div className="space-y-6">

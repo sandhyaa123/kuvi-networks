@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <nav className="bg-indigo-50 shadow-lg p-4 fixed w-full top-0 z-50 text-indigo-900">
       <div className="container mx-auto flex items-center justify-between">
-        <Link to="/" className="text-indigo-900 font-bold text-xl items-center md:gap-2 md:flex">
+        <Link to="/" className="text-black font-bold text-xl items-center md:gap-2 md:flex">
           <img
             className="bg-transparent mix-blend-multiply"
             src={logo}
@@ -80,6 +80,14 @@ const Navbar = () => {
             onClick={handleMenuItemClick}
           >
             Why us
+          </Link>
+
+          <Link 
+            to="/why-us" 
+            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 hover:underline transition duration-200"
+            onClick={handleMenuItemClick}
+          >
+           Our services
           </Link>
 
           <Link 

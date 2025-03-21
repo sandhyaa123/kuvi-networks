@@ -8,6 +8,9 @@ import Navbar from "./Navbar";
 import Services from "./Services";
 import Testimonal from "./Testimonal";
 import WhyChooseUs from "../pages/WhyChooseUs";
+import Heading from "./typography/Heading";
+import LabelHeading from "./typography/labelHeading";
+import Paragraph from "./typography/paragraph";
 
 
 export {
@@ -21,4 +24,7 @@ export {
    Services,
    Testimonal,
    WhyChooseUs, 
+   Heading,
+   LabelHeading,
+   Paragraph,
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Heading from './typography/Heading';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -54,9 +55,10 @@ const ContactUs = () => {
       <div className="mx-auto px-4 container">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <p className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            {/* <p className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               Experience the Difference – Build Your Team with Confidence
-            </p>
+            </p> */}
+            <Heading>Experience the difference - Build your team with confidence</Heading>
           </div>
           <div className="bg-white rounded-lg shadow-xl p-8">
             {successMessage && (

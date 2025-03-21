@@ -1,6 +1,7 @@
 import howWorks from '../assets/images/howWorks.jpeg';
 import talentPool from '../assets/images/talentPool.jpg';
 import teamSupport from '../assets/images/teamSupport.jpg';
+import { Heading, Paragraph } from '../components';
 
 const HowItWorksPage = () => {
     
@@ -12,11 +13,15 @@ const HowItWorksPage = () => {
           <div className="pt-10 sm:pt-16 lg:pt-12 lg:pb-12 lg:max-w-lg">
             <main className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
               <div className="text-center lg:text-left">
-                <p className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">Build Your Dream Team
-                    in 4 Simple Steps</p>
-                <p className="mt-3 text-base text-indigo-100 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl
+                {/* <p className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">Build Your Dream Team
+                    in 4 Simple Steps</p> */}
+                <Heading color='text-white'>Build your dream team
+                in 4 simple steps</Heading>
+                {/* <p className="mt-3 text-base text-indigo-100 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl
                     lg:mx-0">From initial consultation to ongoing management - we handle everything, so you can focus on
-                    your product.</p>
+                    your product.</p> */}
+                    <Paragraph styleCss={'text-indigo-100 sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0'}>From initial consultation to ongoing management - we handle everything, so you can focus on
+                    your product.</Paragraph>
                 {/* <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
                     <button type="submit" className="flex border border-transparent hover:bg-gray-50 w-full items-center
@@ -40,9 +45,12 @@ const HowItWorksPage = () => {
     <div className="py-28 bg-gray-50">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center">
-          <p className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Why Our Process Stands Out</p>
-          <p className="mt-4 text-xl text-gray-500 mx-auto max-w-2xl">We offer more than just team-building – we provide full
-              control, transparency, and long-term reliability.</p>
+          {/* <p className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Why Our Process Stands Out</p> */}
+          <Heading>Why our process stands out</Heading>
+          {/* <p className="mt-4 text-xl text-gray-500 mx-auto max-w-2xl">We offer more than just team-building – we provide full
+              control, transparency, and long-term reliability.</p> */}
+            <Paragraph styleCss={'mt-4 text-gray-500 mx-auto max-w-2xl'}>We offer more than just team-building – we provide full
+            control, transparency, and long-term reliability.</Paragraph>
         </div>
         <div className="mt-12">
           <div className="sm:grid-cols-2 lg:grid-cols-4 grid grid-cols-1 gap-8">
@@ -105,7 +113,8 @@ const HowItWorksPage = () => {
     </div>
     <div className="mx-auto px-4 py-16 container">
       <div className="text-center mx-auto mb-16 max-w-3xl">
-        <p className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Seamless, End-to-End Team-Building Process</p>
+        {/* <p className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Seamless, End-to-End Team-Building Process</p> */}
+        <Heading>Our seamless, end-to-end team-building process</Heading>
         <p className="text-lg text-gray-600">We take care of the heavy lifting – from hiring and onboarding to team management –
             so you can focus entirely on growing your business.</p>
       </div>
@@ -266,8 +275,10 @@ const HowItWorksPage = () => {
     <div className="py-16 bg-white">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center">
-          <p className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Your Team-Building Journey in One
-              Glance</p>
+          {/* <p className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Your Team-Building Journey in One
+              Glance</p> */}
+         <Heading>Your team-building journey in one
+         glance</Heading>
         </div>
         <div className="mt-12 mx-auto max-w-5xl">
           <div className="relative">

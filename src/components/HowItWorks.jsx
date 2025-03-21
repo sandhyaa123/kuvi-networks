@@ -1,15 +1,22 @@
+import Heading from "./typography/Heading";
+import LabelHeading from "./typography/labelHeading";
+import Paragraph from "./typography/paragraph";
+
 const HowItWorks = () => {
   return (
     <div className="bg-white min-h-max">
       <section className="py-16 px-4 md:px-8 lg:px-16 mx-auto max-w-7xl">
         <div>
-          <p className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">
+          {/* <p className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">
             How It Works
-          </p>
-          <p className="text-lg text-gray-600 mx-auto text-center mb-12 max-w-3xl">
+          </p> */}
+          <Heading styleCss="text-center">How it works</Heading>
+          {/* <p className="text-lg text-gray-600 mx-auto text-center mb-12 max-w-3xl">
             Our streamlined process ensures efficiency and clarity at every step
             of your journey with us.
-          </p>
+          </p> */}
+          <Paragraph styleCss="text-center">Our streamlined process ensures efficiency and clarity at every step
+          of your journey with us.</Paragraph>
           <div className="relative">
             <div className="md:block h-full w-1 bg-indigo-200 hidden absolute left-1/2 transform -translate-x-1/2"></div>
             <div className="md:space-y-0 space-y-12">
@@ -20,12 +27,14 @@ const HowItWorks = () => {
                     <div className="text-2xl mb-3 text-indigo-600 md:hidden">
                       1
                     </div>
-                    <p className="text-xl font-bold text-gray-800 mb-3">
+                    {/* <p className="text-xl font-bold text-gray-800 mb-3">
                       Initial Consultation
-                    </p>
-                    <p className="text-gray-600">
+                    </p> */}
+                    <LabelHeading color="text-gray-800"> Initial Consultation</LabelHeading>
+                    {/* <p className="text-gray-600">
                       We understand your requirements, goals, and team needs.
-                    </p>
+                    </p> */}
+                    <Paragraph>We understand your requirements, goals, and team needs.</Paragraph>
                   </div>
                 </div>
                 <div className="md:hidden"></div>
@@ -38,12 +47,14 @@ const HowItWorks = () => {
                     <div className="text-2xl mb-3 text-indigo-600 md:hidden">
                       2
                     </div>
-                    <p className="text-xl font-bold text-gray-800 mb-3">
+                    {/* <p className="text-xl font-bold text-gray-800 mb-3">
                       Team Assembly
-                    </p>
-                    <p className="text-gray-600">
+                    </p> */}
+                    <LabelHeading color="text-gray-800">Team assembly</LabelHeading>
+                    {/* <p className="text-gray-600">
                       We source, recruit, and onboard the right talent for you.
-                    </p>
+                    </p> */}
+                    <Paragraph> We source, recruit, and onboard the right talent for you.</Paragraph>
                   </div>
                 </div>
               </div>
@@ -54,13 +65,16 @@ const HowItWorks = () => {
                     <div className="text-2xl mb-3 text-indigo-600 md:hidden">
                       3
                     </div>
-                    <p className="text-xl font-bold text-gray-800 mb-3">
+                    {/* <p className="text-xl font-bold text-gray-800 mb-3">
                       Onboarding & Integration
-                    </p>
-                    <p className="text-gray-600">
+                    </p> */}
+                    <LabelHeading color="text-gray-800">Onboarding & Integration</LabelHeading>
+                    {/* <p className="text-gray-600">
                       Seamless integration with your company policies, payroll,
                       and infrastructure.
-                    </p>
+                    </p> */}
+                    <Paragraph> Seamless integration with your company policies, payroll,
+                    and infrastructure.</Paragraph>
                   </div>
                 </div>
                 <div className="md:hidden"></div>
@@ -73,13 +87,16 @@ const HowItWorks = () => {
                     <div className="text-2xl mb-3 text-indigo-600 md:hidden">
                       4
                     </div>
-                    <p className="text-xl font-bold text-gray-800 mb-3">
+                    {/* <p className="text-xl font-bold text-gray-800 mb-3">
                       Ongoing Management
-                    </p>
-                    <p className="text-gray-600">
+                    </p> */}
+                    <LabelHeading color="text-gray-800"> Ongoing management</LabelHeading>
+                    {/* <p className="text-gray-600">
                       Continuous support, compliance, and team retention
                       strategies.
-                    </p>
+                    </p> */}
+                    <Paragraph>Continuous support, compliance, and team retention
+                    strategies.</Paragraph>
                   </div>
                 </div>
               </div>

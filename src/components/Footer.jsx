@@ -21,7 +21,7 @@ const Footer = () => {
                 src="https://placehold.co/200x60/indigo/gray?text=Kuvi Networks"
                 className="h-10 w-auto"
               /> */}
-                <Link to="/" className="text-indigo-900 font-bold text-xl items-center md:gap-2 flex"
+                <Link to="/" className="text-black font-bold text-xl items-center md:gap-2 flex"
                 onClick={handleMenuItemClick}
                 >
                         <img
