@@ -112,9 +112,10 @@ const Testimonial = () => (
   <section className="py-16 md:py-24 bg-white">
     <div className="mx-auto px-4 container">
       <div className="text-center mb-16">
-        <Heading>What our clients say</Heading>
+        <Heading>Trusted by founders</Heading>
+        <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
       </div>
-      <div className="md:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-8">
+      <div className="md:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-8 ">
         {testimonialsData.map((testimonial, index) => (
           <TestimonialCard
             key={index}

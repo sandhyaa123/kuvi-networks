@@ -22,7 +22,7 @@ const Hero = () => {
               hiring to HR, finance, and admin.
             </p> */}
             <Paragraph>Focus on building your product while we handle the rest – from
-            hiring to onboarding, payroll, compliances, procurenent et al.</Paragraph>
+            hiring to onboarding, payroll, compliances, procurement et al.</Paragraph>
 
              <a
            href="https://calendly.com/kuvi-networks/explore-kuvi-networks"  

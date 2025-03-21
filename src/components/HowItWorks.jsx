@@ -10,7 +10,10 @@ const HowItWorks = () => {
           {/* <p className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">
             How It Works
           </p> */}
+          <div className="mb-8">
           <Heading styleCss="text-center">How it works</Heading>
+          <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
+          </div>
           {/* <p className="text-lg text-gray-600 mx-auto text-center mb-12 max-w-3xl">
             Our streamlined process ensures efficiency and clarity at every step
             of your journey with us.
@@ -68,13 +71,12 @@ const HowItWorks = () => {
                     {/* <p className="text-xl font-bold text-gray-800 mb-3">
                       Onboarding & Integration
                     </p> */}
-                    <LabelHeading color="text-gray-800">Onboarding & Integration</LabelHeading>
+                    <LabelHeading color="text-gray-800">Onboarding</LabelHeading>
                     {/* <p className="text-gray-600">
                       Seamless integration with your company policies, payroll,
                       and infrastructure.
                     </p> */}
-                    <Paragraph> Seamless integration with your company policies, payroll,
-                    and infrastructure.</Paragraph>
+                    <Paragraph>We help you setup your company policies, find office space and procure laptops etc.</Paragraph>
                   </div>
                 </div>
                 <div className="md:hidden"></div>
@@ -90,20 +92,44 @@ const HowItWorks = () => {
                     {/* <p className="text-xl font-bold text-gray-800 mb-3">
                       Ongoing Management
                     </p> */}
+                    <LabelHeading color="text-gray-800">Fixed service fee</LabelHeading>
+                    {/* <p className="text-gray-600">
+                      Continuous support, compliance, and team retention
+                      strategies.
+                    </p> */}
+                    <Paragraph>We charge a fixed monthly service fee, while all other costs, including team salaries, are transparently passed on to you without any markup.</Paragraph>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="md:grid md:grid-cols-2 md:gap-8 relative">
+                <div className="md:block hidden"></div>
+                <div className="md:pl-12">
+                  <div className="w-5 h-5 rounded-full bg-indigo-600 absolute left-1/2 transform -translate-x-2.5 top-5 z-10  md:block hidden"></div>
+                  <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 max-w-lg">
+                    <div className="text-2xl mb-3 text-indigo-600 md:hidden">
+                      5
+                    </div>
+                    {/* <p className="text-xl font-bold text-gray-800 mb-3">
+                      Ongoing Management
+                    </p> */}
                     <LabelHeading color="text-gray-800"> Ongoing management</LabelHeading>
                     {/* <p className="text-gray-600">
                       Continuous support, compliance, and team retention
                       strategies.
                     </p> */}
-                    <Paragraph>Continuous support, compliance, and team retention
-                    strategies.</Paragraph>
+                    <Paragraph>Continuous support, payroll, compliance, and team management.</Paragraph>
                   </div>
                 </div>
               </div>
+            
             </div>
           </div>
         </div>
+        <div>
+        </div>
       </section>
+      {/* // no more button - redirect to how it works in all section which having their own page */}
     </div>
   );
 };

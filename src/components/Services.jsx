@@ -15,7 +15,7 @@ const Services = () => (
         <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
           <div className="text-4xl mb-4">🌟</div>
           <LabelHeading color="text-gray-800">Team sourcing & Onboarding</LabelHeading>
-          <Paragraph>We hire and onboard skilled tech and non-tech talent tailored to your needs.</Paragraph>
+          <Paragraph>We source, hire and onboard best tech and non-tech talent tailored to your needs</Paragraph>
         </div>
 
         {/* HR & Admin Management */}
