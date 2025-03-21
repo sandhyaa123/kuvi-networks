@@ -6,23 +6,33 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: "What makes you different from other team-building agencies?",
+      question: "What makes you different from other outsourcing agencies?",
       answer:
-        "We offer full transparency, control, and direct access to your team with no hidden costs.",
+        "We help you set up your own team with complete transparency and full control—ensuring no hidden costs.",
+    },
+    {
+      question: "Can you set up other teams as well?",
+      answer:
+        "Yes, we can assist you in setting up sales, marketing, customer success, operations, or any other team based on your specific requirements.",
+    },
+    {
+      question: "How is your service fee structured?",
+      answer:
+        "Our monthly service fee is structured based on the size of your team.",
     },
     {
       question: "How do you ensure transparency and full control?",
       answer:
-        "You manage policies, salary structures, and team dynamics while we handle operations.",
+        "We transfer team salaries and other costs to you without any markup, while you retain full control over defining the team's policies, salary structure, and culture.",
     },
     {
       question: "Can I choose my own team members?",
-      answer: "Yes, you have the final say in team selection.",
+      answer: "Absolutely, you have the final say in team selection.",
     },
     {
       question: "Do you handle legal compliance and payroll?",
       answer:
-        "Absolutely. We manage all legal, financial, and administrative aspects.",
+        "Yes, we manage all legal, financial, and administrative aspects.",
     },
     {
       question: "How do I scale my team up or down?",

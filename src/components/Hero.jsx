@@ -14,7 +14,7 @@ const Hero = () => {
               Transparency
             </p> */}
             <Heading color="text-indigo-900">
-            Setup your dream team in India - with full control &
+            Setup your tech team in India - with full control &
             transparency
             </Heading>
             {/* <p className="text-xl text-gray-600 mb-8">

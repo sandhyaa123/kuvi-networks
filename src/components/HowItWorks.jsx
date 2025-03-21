@@ -27,8 +27,9 @@ const HowItWorks = () => {
                 <div className="md:text-right md:pr-12">
                   <div className="w-5 h-5 rounded-full bg-indigo-600 absolute left-1/2 transform -translate-x-2.5 top-5 z-10 md:block hidden"></div>
                   <div className="bg-white shadow-lg rounded-lg md:ml-auto p-6 hover:shadow-xl transition duration-300 max-w-lg">
+                   {/* should be come in one line with title with same style */}
                     <div className="text-2xl mb-3 text-indigo-600 md:hidden">
-                      1
+                      1.
                     </div>
                     {/* <p className="text-xl font-bold text-gray-800 mb-3">
                       Initial Consultation
@@ -48,7 +49,7 @@ const HowItWorks = () => {
                   <div className="w-5 h-5 rounded-full bg-indigo-600 absolute left-1/2 transform -translate-x-2.5 top-5 z-10  md:block hidden"></div>
                   <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 max-w-lg">
                     <div className="text-2xl mb-3 text-indigo-600 md:hidden">
-                      2
+                      2.
                     </div>
                     {/* <p className="text-xl font-bold text-gray-800 mb-3">
                       Team Assembly
@@ -66,7 +67,7 @@ const HowItWorks = () => {
                   <div className="w-5 h-5 rounded-full bg-indigo-600 absolute left-1/2 transform -translate-x-2.5 top-5 z-10  md:block hidden"></div>
                   <div className="bg-white shadow-lg rounded-lg md:ml-auto p-6 hover:shadow-xl transition duration-300 max-w-lg">
                     <div className="text-2xl mb-3 text-indigo-600 md:hidden">
-                      3
+                      3.
                     </div>
                     {/* <p className="text-xl font-bold text-gray-800 mb-3">
                       Onboarding & Integration
@@ -87,7 +88,7 @@ const HowItWorks = () => {
                   <div className="w-5 h-5 rounded-full bg-indigo-600 absolute left-1/2 transform -translate-x-2.5 top-5 z-10  md:block hidden"></div>
                   <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 max-w-lg">
                     <div className="text-2xl mb-3 text-indigo-600 md:hidden">
-                      4
+                      4.
                     </div>
                     {/* <p className="text-xl font-bold text-gray-800 mb-3">
                       Ongoing Management
@@ -109,7 +110,7 @@ const HowItWorks = () => {
                   <div className="w-5 h-5 rounded-full bg-indigo-600 absolute left-1/2 transform -translate-x-2.5 top-5 z-10  md:block hidden"></div>
                   <div className="bg-white shadow-lg rounded-lg md:ml-auto p-6 hover:shadow-xl transition duration-300 max-w-lg">
                     <div className="text-2xl mb-3 text-indigo-600 md:hidden">
-                      3
+                      5.
                     </div>
                     {/* <p className="text-xl font-bold text-gray-800 mb-3">
                       Onboarding & Integration

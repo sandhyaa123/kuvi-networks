@@ -24,22 +24,24 @@ const Home = () => {
               Why Choose Us?
             </p> */}
             <Heading>Why choose us?</Heading>
+            <Paragraph>For exponential business growth and complete peace of mind</Paragraph>
             <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
           </div>
           <div className="md:grid-cols-2 lg:grid-cols-4 grid grid-cols-1 gap-10">
   
   {/* Full Control */}
   <div className="bg-white rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300 p-8">
-    <div className="text-5xl text-indigo-600 mb-4">🛠️</div>
-    <LabelHeading color="text-gray-800">Full control</LabelHeading>
-    <Paragraph>Define your own policies, salary structure, and employee hikes.</Paragraph>
+   {/* change this icon */}
+    <div className="text-5xl text-indigo-600 mb-4">🛠️</div> 
+    <LabelHeading color="text-gray-800">Your own team</LabelHeading>
+    <Paragraph>Your dedicated team, working seamlessly under policies, salary guidelines, and cultural principles - defined by you</Paragraph>
   </div>
 
   {/* Cost-Effective */}
   <div className="bg-white rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300 p-8">
     <div className="text-5xl text-indigo-600 mb-4">💰</div>
     <LabelHeading color="text-gray-800">Cost-effective</LabelHeading>
-    <Paragraph>Build a skilled team in India at a fraction of the cost.</Paragraph>
+    <Paragraph>Build a skilled team in India at a fraction of the cost</Paragraph>
   </div>
 
   {/* Transparency */}
