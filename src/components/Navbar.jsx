@@ -1,3 +1,8 @@
+
+// on hover - no underline 
+//  join us - new page - content - one button which will redirect to that page
+// google analytics,
+
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/images/logo.jpg';
@@ -75,11 +80,11 @@ const Navbar = () => {
           </Link>
 
           <Link 
-            to="/why-us" 
+            to="/how-it-works" 
             className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 hover:underline transition duration-200"
             onClick={handleMenuItemClick}
           >
-            Why us
+            How it works
           </Link>
 
           <Link 
@@ -91,13 +96,12 @@ const Navbar = () => {
           </Link>
 
           <Link 
-            to="/how-it-works" 
+            to="/why-us" 
             className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 hover:underline transition duration-200"
             onClick={handleMenuItemClick}
           >
-            How it works
+            Why us
           </Link>
-          
           <a 
             href="https://forms.gle/sh68Te2Z5ZtoFsgt6" 
             target="_blank"
