@@ -102,27 +102,28 @@ const HowItWorks = () => {
                 </div>
               </div>
               
+              
+            
               <div className="md:grid md:grid-cols-2 md:gap-8 relative">
-                <div className="md:block hidden"></div>
-                <div className="md:pl-12">
+                <div className="md:text-right md:pr-12">
                   <div className="w-5 h-5 rounded-full bg-indigo-600 absolute left-1/2 transform -translate-x-2.5 top-5 z-10  md:block hidden"></div>
-                  <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 max-w-lg">
+                  <div className="bg-white shadow-lg rounded-lg md:ml-auto p-6 hover:shadow-xl transition duration-300 max-w-lg">
                     <div className="text-2xl mb-3 text-indigo-600 md:hidden">
-                      5
+                      3
                     </div>
                     {/* <p className="text-xl font-bold text-gray-800 mb-3">
-                      Ongoing Management
+                      Onboarding & Integration
                     </p> */}
-                    <LabelHeading color="text-gray-800"> Ongoing management</LabelHeading>
+                    <LabelHeading color="text-gray-800">Ongoing management</LabelHeading>
                     {/* <p className="text-gray-600">
-                      Continuous support, compliance, and team retention
-                      strategies.
+                      Seamless integration with your company policies, payroll,
+                      and infrastructure.
                     </p> */}
                     <Paragraph>Continuous support, payroll, compliance, and team management.</Paragraph>
-                  </div>
+                    </div>
                 </div>
+                <div className="md:hidden"></div>
               </div>
-            
             </div>
           </div>
         </div>
