@@ -1,17 +1,16 @@
-import Hero from "./Hero";
-import ContactUs from "./ContactUs";
-import ErrorPage from "./ErorrPage";
-import Faq from "./FAQ";
-import Footer from "./Footer";
-import HowItWorks from "./HowItWorks";
-import Navbar from "./Navbar";
-import Services from "./Services";
-import Testimonal from "./Testimonal";
-import WhyChooseUs from "../pages/WhyChooseUs";
+import Hero from "./common/Hero";
+import ContactUs from "./common/ContactUs";
+import ErrorPage from "../pages/ErorrPage";
+import Faq from "./common/FAQ";
+import Footer from "./common/Footer";
+import HowItWorks from "./howItWorks/HowItWorks";
+import Navbar from "./common/Navbar";
+import Services from "./services/Service";
+import Testimonal from "./testimonial/Testimonal";
 import Heading from "./typography/Heading";
 import LabelHeading from "./typography/labelHeading";
 import Paragraph from "./typography/paragraph";
-
+import WhyUs from "./common/WhyUs";
 
 export {
    Hero,
@@ -23,8 +22,8 @@ export {
    Navbar,
    Services,
    Testimonal,
-   WhyChooseUs, 
    Heading,
    LabelHeading,
    Paragraph,
+   WhyUs,
 }
