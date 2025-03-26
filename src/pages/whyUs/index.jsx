@@ -3,8 +3,11 @@ import { LabelHeading, Paragraph } from "../../components";
 import WhyUsHero from "./WhyUsHero";
 import KeyDifferentiator from "./KeyDifferentiator";
 import WhyUsTable from "./WhyUsTable";
+import { usePostHog } from 'posthog-js/react';
 
 const WhyChooseUs = () => {
+  const posthog = usePostHog();
+
 
   useEffect(() => {
     window.scrollTo({
@@ -29,6 +32,8 @@ const WhyChooseUs = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="m-2 inline-flex border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 justify-center rounded-md py-3 px-8 bg-indigo-600 text-base font-medium text-indigo-50 shadow-sm"
+              onClick={() =>  posthog?.capture('why_us_page_schedule_call_clicked')}
+          
             >
               Schedule a call
             </a>

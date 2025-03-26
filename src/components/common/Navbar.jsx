@@ -1,10 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from '../../assets/images/logo.jpg';
+import { usePostHog } from 'posthog-js/react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
+      const posthog = usePostHog();
+  
   const handleMenuItemClick = () => {
     setIsMenuOpen(false);
     window.scrollTo({
@@ -104,7 +107,10 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="m-2 inline-flex border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 justify-center rounded-md py-3 px-8 bg-indigo-600 text-base font-medium text-indigo-50 shadow-sm"
-            onClick={handleMenuItemClick}
+            onClick={() => {
+              posthog?.capture('navbar_schedule_call_clicked');
+              handleMenuItemClick();
+            }}
           >
             Schedule a call
           </a>

@@ -2,9 +2,11 @@ import ServiceBanner from "./Banner";
 import OurServices from "./ourServices";
 import { Paragraph, LabelHeading } from "../../components";
 import { useEffect } from "react";
+import { usePostHog } from 'posthog-js/react';
 
 
 const Services = () => {
+    const posthog = usePostHog();
 
      useEffect(() => {
         window.scrollTo({
@@ -25,7 +27,9 @@ const Services = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="m-2 inline-flex border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 justify-center rounded-md py-3 px-8 bg-indigo-600 text-base font-medium text-indigo-50 shadow-sm"
-            >
+              onClick={() =>  posthog?.capture('our_services_page_schedule_call_clicked')}
+
+           >
               Schedule a Call
             </a>
           </div>

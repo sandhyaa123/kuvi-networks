@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import Heading from '../typography/Heading';
 import { usePostHog } from 'posthog-js/react';
-
+// import { createContact } from '../../apis/contactUsApi';
 const ContactUs = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     company: '',
+    website: '',
     message: '',
   });
 
@@ -23,34 +24,46 @@ const ContactUs = () => {
   };
 
   const handleSubmit = (e) => {
+   try {
     e.preventDefault();
 
-    const { name, email, company, message } = formData;
+    const { firstName, lastName, email, company, website, message } = formData;
 
     const templateParams = {
       title: 'Kuvi Networks',
-      from_name: name,
-      from_email: email,
-      company: company,
-      message: message,
+      firstName,
+      lastName,
+      email,
+      company,
+      website,
+      message,
     };
+    console.log('tem', templateParams);
+    // await createContact(formData);
 
-    emailjs.send('service_19aphcn', 'template_f6j719q', templateParams, 'SL8MHqyHZZfP6QhQA')
-      .then((response) => {
-        console.log('Email sent successfully!', response.status, response.text);
-        setSuccessMessage("Thank you! Your message has been sent successfully.");
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          message: '',
-        });
-        posthog?.capture('contact_form_submitted');
-      })
-      .catch((error) => {
-        console.error('Failed to send email. Error:', error);
-        setSuccessMessage("Failed to send your message. Please try again later.");
-      });
+    // emailjs.send('service_19aphcn', 'template_f6j719q', templateParams, 'SL8MHqyHZZfP6QhQA')
+    //   .then((response) => {
+    //     console.log('Email sent successfully!', response.status, response.text);
+    //     setSuccessMessage("Thank you! Your message has been sent successfully.");
+    //     setFormData({
+    //       name: '',
+    //       email: '',
+    //       company: '',
+    //       message: '',
+    //     });
+    //   })
+    //   .catch((error) => {
+    //     console.error('Failed to send email. Error:', error);
+    //     setSuccessMessage("Failed to send your message. Please try again later.");
+    //   });
+    posthog?.capture('contact_form_submitted');
+    setSuccessMessage("Thank you! Your message has been sent successfully.");
+
+   }
+   catch (error) {
+    console.error('Error:', error);
+    alert('Failed to create contact.');
+  }
   };
 
   return (
@@ -66,27 +79,36 @@ const ContactUs = () => {
               <div className="mb-4 text-green-600 text-center">{successMessage}</div>
             )}
             <form onSubmit={handleSubmit}>
-              <div className="md:grid-cols-2 mb-6 grid grid-cols-1 gap-6">
+            <div className="md:grid-cols-2 mb-6 grid grid-cols-1 gap-6">
                 <div>
-                  <label htmlFor="name" className="text-sm font-medium text-gray-700 mb-2 block">
-                    Name
+                  <label htmlFor="firstName" className="text-sm font-medium text-gray-700 mb-2 block">
+                    First name
                   </label>
                   <input
                     type="text"
-                    name="name"
-                    placeholder="Enter your name"
+                    name="firstName"
+                    placeholder="Enter your first name"
                     className="focus:border-indigo-700 focus:outline-none focus:shadow-outline flex-grow transition duration-200 appearance-none p-2 border-2 border-gray-300 text-black bg-gray-100 font-normal w-full h-12 text-xs rounded-md shadow-sm"
-                    id="name"
-                    value={formData.name}
+                    id="firstName"
+                    value={formData?.firstName}
                     onChange={handleChange}
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="text-sm font-medium text-gray-700 mb-2 block">
-                    Email
+                  <label htmlFor="lastName" className="text-sm font-medium text-gray-700 mb-2 block">
+                    Last name
                   </label>
                   <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Enter your last name"
+                    className="focus:border-indigo-700 focus:outline-none focus:shadow-outline flex-grow transition duration-200 appearance-none p-2 border-2 border-gray-300 text-black bg-gray-100 font-normal w-full h-12 text-xs rounded-md shadow-sm"
+                    id="lastName"
+                    value={formData?.lastName}
+                    onChange={handleChange}
+                  />
+                  {/* <input
                     type="email"
                     name="email"
                     placeholder="Enter your email"
@@ -95,14 +117,15 @@ const ContactUs = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                  />
+                  /> */}
                 </div>
               </div>
+            
               <div className="mb-6">
-                <label htmlFor="company" className="text-sm font-medium text-gray-700 mb-2 block">
-                  Company
+                <label htmlFor="email" className="text-sm font-medium text-gray-700 mb-2 block">
+                  Email
                 </label>
-                <input
+                {/* <input
                   type="text"
                   name="company"
                   placeholder="Enter your company name"
@@ -111,7 +134,47 @@ const ContactUs = () => {
                   value={formData.company}
                   onChange={handleChange}
                   required
+                /> */}
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    className="focus:border-indigo-700 focus:outline-none focus:shadow-outline flex-grow transition duration-200 appearance-none p-2 border-2 border-gray-300 text-black bg-gray-100 font-normal w-full h-12 text-xs rounded-md shadow-sm"
+                    id="email"
+                    value={formData?.email}
+                    onChange={handleChange}
+                    required
+                  /> 
+              </div>
+              <div className="md:grid-cols-2 mb-6 grid grid-cols-1 gap-6">
+                <div>
+                  <label htmlFor="company" className="text-sm font-medium text-gray-700 mb-2 block">
+                    Company
+                  </label>
+                  <input
+                  type="text"
+                  name="company"
+                  placeholder="Enter your company name"
+                  className="focus:border-indigo-700 focus:outline-none focus:shadow-outline flex-grow transition duration-200 appearance-none p-2 border-2 border-gray-300 text-black bg-gray-100 font-normal w-full h-12 text-xs rounded-md shadow-sm"
+                  id="company"
+                  value={formData?.company}
+                  onChange={handleChange}
                 />
+                </div>
+                <div>
+                  <label htmlFor="website" className="text-sm font-medium text-gray-700 mb-2 block">
+                    Website
+                  </label>
+                  <input
+                    type="text"
+                    name="website"
+                    placeholder="Enter your compnay website"
+                    className="focus:border-indigo-700 focus:outline-none focus:shadow-outline flex-grow transition duration-200 appearance-none p-2 border-2 border-gray-300 text-black bg-gray-100 font-normal w-full h-12 text-xs rounded-md shadow-sm"
+                    id="website"
+                    value={formData?.website}
+                    onChange={handleChange}
+                  />
+                </div>
               </div>
               <div className="mb-6">
                 <label htmlFor="message" className="text-sm font-medium text-gray-700 mb-2 block">
@@ -122,7 +185,7 @@ const ContactUs = () => {
                   placeholder="Enter your message"
                   className="text-black bg-gray-100 font-normal w-full h-32 text-xs rounded-md shadow-sm focus:border-indigo-700 focus:outline-none focus:shadow-outline flex-grow transition duration-200 appearance-none p-2 border-2 border-gray-300"
                   id="message"
-                  value={formData.message}
+                  value={formData?.message}
                   onChange={handleChange}
                   required
                 ></textarea>
@@ -139,6 +202,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+      
     </section>
   );
 };

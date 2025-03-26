@@ -1,7 +1,10 @@
 import { Heading, Paragraph } from "../../components";
 import serviceImage from "../../assets/images/services.jpeg";
+import { usePostHog } from 'posthog-js/react';
 
 const ServiceBanner = () => {
+      const posthog = usePostHog();
+  
   return (
     <div class="bg-indigo-700 relative overflow-hidden">
       <div class="mx-auto max-w-7xl">
@@ -38,7 +41,9 @@ const ServiceBanner = () => {
                     class="inline-flex border border-indigo-500 focus:outline-none focus:ring-2
             focus:ring-indigo-500 focus:ring-offset-2 hover:bg-indigo-700 justify-center rounded-md py-3 px-6
             bg-indigo-600 text-base font-medium text-white shadow-sm w-full"
-                  >
+            onClick={() =>  posthog?.capture('our_services_page_schedule_call_clicked')}
+           
+                 >
                     Schedule a free consultation
                   </a>
                 </div>

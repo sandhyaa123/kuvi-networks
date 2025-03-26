@@ -1,9 +1,12 @@
 import diverseTeamColl from "../../assets/images/diverseTeamColl.jpeg";
 import Heading from "../typography/Heading";
 import Paragraph from "../typography/paragraph";
+import { usePostHog } from 'posthog-js/react';
 
 
 const Hero = () => {
+    const posthog = usePostHog();
+  
   return (
     <div className="bg-indigo-50 relative overflow-hidden">
       <div className="mx-auto px-6 py-20 lg:py-20 container">
@@ -23,6 +26,7 @@ const Hero = () => {
                   focus:ring-indigo-500 focus:ring-offset-2 hover:bg-indigo-700 transition-all duration-300 transform
                   hover:scale-105 justify-center rounded-md py-3 px-8 bg-indigo-600 text-base font-medium text-white
                   shadow-sm"
+            onClick={() =>  posthog?.capture('home_page_schedule_call_clicked')}
            >
              Schedule a free consultation
            </a>

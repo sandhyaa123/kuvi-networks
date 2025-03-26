@@ -4,10 +4,11 @@ import {
     HowItWorks,
     Services,
     Testimonal,
-    ContactUs,
+    // ContactUs,
     Faq,
     WhyUs
  } from "../components";
+import ContactForm from "../components/common/zohoForm";
 const Home = () => {
 
   useEffect(() => {
@@ -23,7 +24,8 @@ const Home = () => {
       <Services />
       <WhyUs />
       <Testimonal />
-      <ContactUs />
+      {/* <ContactUs /> */}
+      <ContactForm />
       <Faq />
     </div>
   );

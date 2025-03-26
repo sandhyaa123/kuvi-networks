@@ -4,6 +4,8 @@ import ongoing from "../../assets/images/ongoing.jpeg";
 import initialConsultation from "../../assets/images/initialConsultation.jpeg";
 import onboarding from "../../assets/images/onboarding.jpeg";
 import fixedPrice from "../../assets/images/fixedPrice.jpeg";
+import { usePostHog } from 'posthog-js/react';
+
 const steps = [
   {
     number: 1,
@@ -203,6 +205,8 @@ const Step = ({ title, description, inclusions, children }) => {
 };
 
 const ProessSteps = () => {
+      const posthog = usePostHog();
+  
   return (
     <div>
       <div className="py-16 bg-white">
@@ -385,7 +389,9 @@ const ProessSteps = () => {
                     className="inline-flex border border-indigo-500 focus:outline-none focus:ring-2
                 focus:ring-indigo-500 focus:ring-offset-2 hover:bg-indigo-700 transition duration-300 justify-center
                 rounded-md py-2 px-4 bg-indigo-600 text-sm font-medium text-white shadow-sm"
-                  >
+                onClick={() =>  posthog?.capture('how_it_works_page_schedule_call_clicked')}
+          
+                 >
                     Schedule your free consultation
                   </a>
                 )}
