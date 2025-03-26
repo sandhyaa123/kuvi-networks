@@ -1,13 +1,26 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { BrowserRouter as Router } from "react-router-dom";
+import { PostHogProvider } from "posthog-js/react";
 
-createRoot(document.getElementById('root')).render(
+const POSTHOG_API_KEY = import.meta.env.VITE_POSTHOG_API_KEY;
+const POSTHOG_HOST = import.meta.env.VITE_POSTHOG_HOST;
+
+const postHogOptions = {
+  api_host: POSTHOG_HOST,
+};
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
   <StrictMode>
-    <Router>
-    <App />
-    </Router>
-  </StrictMode>,
-)
+    <PostHogProvider apiKey={POSTHOG_API_KEY} options={postHogOptions}>
+      <Router>
+        <App />
+      </Router>
+    </PostHogProvider>
+  </StrictMode>
+);

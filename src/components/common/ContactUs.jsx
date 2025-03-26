@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Heading from '../typography/Heading';
+import { usePostHog } from 'posthog-js/react';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const ContactUs = () => {
   });
 
   const [successMessage, setSuccessMessage] = useState('');
+  const posthog = usePostHog();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,6 +45,7 @@ const ContactUs = () => {
           company: '',
           message: '',
         });
+        posthog?.capture('contact_form_submitted');
       })
       .catch((error) => {
         console.error('Failed to send email. Error:', error);

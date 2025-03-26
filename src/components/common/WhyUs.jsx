@@ -19,12 +19,12 @@ const featuresData = [
   {
     icon: "🔍",
     title: "Transparency",
-    description: "Direct communication with your team – no middlemen, no hidden costs.",
+    description: "Direct communication with your team – no middlemen, no hidden costs",
   },
   {
     icon: "✅",
     title: "End-to-end management",
-    description: "HR, finance, and admin – we handle everything, so you don't have to.",
+    description: "HR, finance, and admin – we handle everything, so you don't have to",
   },
 ];
 

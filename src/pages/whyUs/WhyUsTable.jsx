@@ -87,7 +87,7 @@ const WhyUsTable = () => {
     <div className="mb-24">
       <div className="mb-12">
         <LabelHeading styleCss="text-gray-800 text-center">
-          ✅ How we deliver more value than traditional agencies
+          How we deliver more value than traditional agencies
         </LabelHeading>
       </div>
       <div className="bg-white rounded-xl shadow-lg overflow-x-auto">

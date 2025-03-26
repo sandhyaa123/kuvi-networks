@@ -12,7 +12,7 @@ const HowItWorksHero = () => {
               <main className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                 <div className="text-center lg:text-left">
                   <Heading color='text-white'>Build your dream team
-                  in 4 simple steps</Heading>
+                  in  simple steps</Heading>
                       <Paragraph styleCss={'text-indigo-100 sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0'}>From initial consultation to ongoing management - we handle everything, so you can focus on
                       your product.</Paragraph>
                 </div>

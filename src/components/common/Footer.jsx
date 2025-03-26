@@ -68,7 +68,7 @@ const Footer = () => {
           </div>
           <div className="mt-8 md:mt-0">
             <p className="text-lg font-semibold text-gray-800 mb-6">
-              Quick Links
+              Quick links
             </p>
             <ul className="space-y-2">
               <li>
@@ -120,7 +120,7 @@ const Footer = () => {
           </div>
           <div className="mt-8 md:mt-0">
             <p className="text-lg font-semibold text-gray-800 mb-6">
-              Contact Us
+              Contact us
             </p>
             <ul className="space-y-4">
               <li className="items-center flex">
@@ -182,7 +182,7 @@ const Footer = () => {
                 max-w-7xl flex flex-col"
           >
             <p className="mb-2 sm:mb-0">
-              © 2024 Kuvi Networks. All Rights Reserved.
+              © 2024 Kuvi Networks. All rights reserved.
             </p>
             <div className="flex space-x-4"></div>
           </div>

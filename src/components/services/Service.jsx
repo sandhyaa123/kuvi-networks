@@ -6,33 +6,33 @@ import { Link } from "react-router-dom";
 const servicesData = [
   {
     icon: "🌟",
-    title: "Team sourcing & Onboarding",
-    description: "We source, hire, and onboard the best tech and non-tech talent, tailored to your needs.",
+    title: "Team sourcing & onboarding",
+    description: "We source, hire, and onboard the best tech and non-tech talent, tailored to your needs",
   },
   {
     icon: "📊",
-    title: "HR & Admin management",
-    description: "From payroll and policies to legal compliance – we handle it all.",
+    title: "HR & admin management",
+    description: "From payroll and policies to legal compliance – we handle it all",
   },
   {
     icon: "💸",
     title: "Finance management",
-    description: "Seamless processing of salaries, reimbursements, tax deductions, provident fund, and payslips.",
+    description: "Seamless processing of salaries, reimbursements, tax deductions, provident fund, and payslips",
   },
   {
     icon: "💻",
     title: "Infrastructure support",
-    description: "Office space, equipment, and onboarding kits to empower your team.",
+    description: "Office space, equipment, and onboarding kits to empower your team",
   },
   {
     icon: "🔥",
     title: "Ongoing team management",
-    description: "Continuous performance monitoring and retention strategies to keep your team motivated.",
+    description: "Continuous performance monitoring and retention strategies to keep your team motivated",
   },
   {
     icon: "⚖️",
-    title: "Legal & Compliance support",
-    description: "We ensure you are compliant with all local laws and regulations.",
+    title: "Legal & compliance support",
+    description: "We ensure you are compliant with all local laws and regulations",
   },
 ];
 
@@ -49,7 +49,7 @@ const Services = () => (
     <div className="mx-auto px-6 container">
       <div className="mx-auto text-center mb-16 max-w-3xl">
         <Heading>Our services - Your end-to-end team management partner</Heading>
-        <Paragraph>We handle everything so you can focus on building the product you've always envisioned.</Paragraph>
+        <Paragraph>We handle everything so you can focus on building the product you've always envisioned</Paragraph>
         <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
       </div>
       <div className="md:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-10">

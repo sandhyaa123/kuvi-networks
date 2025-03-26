@@ -1,6 +1,5 @@
 import { Heading, LabelHeading, Paragraph } from "../../components";
 
-// Icons
 const CheckIcon = () => (
   <svg
     className="h-6 w-6 text-indigo-500 mr-2"
@@ -21,7 +20,7 @@ const CheckIcon = () => (
 const servicesData = [
   {
     id: 1,
-    title: "Team Sourcing & Onboarding",
+    title: "Team sourcing & onboarding",
     description: "We identify, recruit, and onboard top-tier tech and non-tech professionals who align with your company culture and requirements.",
     features: [
       "Custom talent acquisition tailored to your needs",
@@ -38,7 +37,7 @@ const servicesData = [
   },
   {
     id: 2,
-    title: "HR & Admin Management",
+    title: "HR & admin management",
     description: "From payroll processing to leave policies, we handle all HR functions to keep your team productive and compliant.",
     features: [
       "Employee policies & contracts",
@@ -53,7 +52,7 @@ const servicesData = [
   },
   {
     id: 3,
-    title: "Finance & Payroll Management",
+    title: "Finance management",
     description: "We take care of salary processing, reimbursements, and financial compliance – ensuring accuracy and transparency.",
     features: [
       "Timely salary disbursement",
@@ -68,7 +67,7 @@ const servicesData = [
   },
   {
     id: 4,
-    title: "Infrastructure Support",
+    title: "Infrastructure support",
     description: "We set up everything your team needs - office spaces, IT equipment, and seamless remote work solutions.",
     features: [
       "Office setup & co-working spaces",
@@ -83,7 +82,7 @@ const servicesData = [
   },
   {
     id: 5,
-    title: "Ongoing Team Management",
+    title: "Ongoing team management",
     description: "We provide ongoing team engagement, performance monitoring, and retention strategies to maintain productivity.",
     features: [
       "Regular check-ins & feedback loops",
@@ -98,7 +97,7 @@ const servicesData = [
   },
   {
     id: 6,
-    title: "Legal & Compliance Support",
+    title: "Legal & compliance support",
     description: "Stay fully compliant with Indian labor laws – we manage employment contracts, tax regulations, and corporate governance.",
     features: [
       "Employee contracts & legal documentation",

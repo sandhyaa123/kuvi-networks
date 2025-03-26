@@ -8,27 +8,27 @@ const stepsData = [
   {
     step: 1,
     title: "Initial consultation",
-    content: "We understand your requirements, goals, and team needs.",
+    content: "We understand your requirements, goals, and team needs",
   },
   {
     step: 2,
-    title: "Team assembly",
-    content: "We source, recruit, and onboard the right talent for you.",
+    title: "Talent sourcing",
+    content: "We source, recruit, and onboard the right talent for you",
   },
   {
     step: 3,
-    title: "Onboarding",
-    content: "We help you set up your company policies, find office space, and procure laptops etc.",
+    title: "Onboarding & setup",
+    content: "We help you set up your company policies, find office space, and procure laptops etc",
   },
   {
     step: 4,
     title: "Fixed service fee",
-    content: "We charge a fixed monthly service fee, while all other costs, including team salaries, are transparently passed on to you without any markup.",
+    content: "We charge a fixed monthly service fee, while all other costs, including team salaries, are transparently passed on to you without any markup",
   },
   {
     step: 5,
     title: "Ongoing management",
-    content: "Continuous support, payroll, compliance, and team management.",
+    content: "Continuous support, payroll, compliance, and team management",
   },
 ];
 
@@ -40,7 +40,7 @@ const HowItWorks = () => {
         <div className="mb-8">
           <Heading styleCss="text-center">How it works</Heading>
           <Paragraph styleCss="text-center">
-            Our streamlined process ensures efficiency and clarity at every step of your journey with us.
+            Our streamlined process ensures efficiency and clarity at every step of your journey with us
           </Paragraph>
           <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
         </div>
