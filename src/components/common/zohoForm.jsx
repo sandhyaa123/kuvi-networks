@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Heading from '../typography/Heading';
 
-const ContactForm = () => {
+const ZohoContactForm = () => {
   const iframeRef = useRef(null);
 
   useEffect(() => {
@@ -54,4 +54,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ZohoContactForm;

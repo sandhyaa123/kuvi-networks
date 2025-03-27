@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Heading from '../typography/Heading';
 import { usePostHog } from 'posthog-js/react';
-// import { createContact } from '../../apis/contactUsApi';
+import { createContact } from '../../apis/contactUsApi';
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -23,7 +23,7 @@ const ContactUs = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
    try {
     e.preventDefault();
 
@@ -39,7 +39,7 @@ const ContactUs = () => {
       message,
     };
     console.log('tem', templateParams);
-    // await createContact(formData);
+    await createContact(formData);
 
     // emailjs.send('service_19aphcn', 'template_f6j719q', templateParams, 'SL8MHqyHZZfP6QhQA')
     //   .then((response) => {
@@ -62,7 +62,6 @@ const ContactUs = () => {
    }
    catch (error) {
     console.error('Error:', error);
-    alert('Failed to create contact.');
   }
   };
 
