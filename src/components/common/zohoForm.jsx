@@ -18,7 +18,6 @@ const ZohoContactForm = () => {
           if (iframeRef.current && iframeRef.current.src.includes(formId)) {
             iframeRef.current.style.height = newHeight;
 
-            // Scroll into view for better UX
             if (iframeData.length === 3) {
               iframeRef.current.scrollIntoView({ behavior: 'smooth' });
             }

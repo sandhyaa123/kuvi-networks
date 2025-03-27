@@ -112,7 +112,6 @@ const servicesData = [
   },
 ];
 
-// Service Card Component
 const ServiceCard = ({ title, description, features, icon }) => (
   <div className="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 p-8">
     <div className="h-16 w-16 rounded-md bg-indigo-500 text-white mb-5 flex items-center justify-center">

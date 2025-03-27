@@ -5,7 +5,6 @@ import {
     Services,
     Testimonal,
     ContactUs,
-    // ZohoContactForm,
     Faq,
     WhyUs
  } from "../components";
@@ -24,7 +23,6 @@ const Home = () => {
       <Services />
       <WhyUs />
       <Testimonal />
-      {/* <ZohoContactForm /> */}
       <ContactUs />
       <Faq />
     </div>
