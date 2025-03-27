@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Heading from '../typography/Heading';
 import { usePostHog } from 'posthog-js/react';
 import { createContact } from '../../apis/contactUsApi';
+import emailjs from '@emailjs/browser';
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -28,21 +29,30 @@ const ContactUs = () => {
     e.preventDefault();
     await createContact(formData);
 
-    // emailjs.send('service_19aphcn', 'template_f6j719q', templateParams, 'SL8MHqyHZZfP6QhQA')
-    //   .then((response) => {
-    //     console.log('Email sent successfully!', response.status, response.text);
-    //     setSuccessMessage("Thank you! Your message has been sent successfully.");
-    //     setFormData({
-    //       name: '',
-    //       email: '',
-    //       company: '',
-    //       message: '',
-    //     });
-    //   })
-    //   .catch((error) => {
-    //     console.error('Failed to send email. Error:', error);
-    //     setSuccessMessage("Failed to send your message. Please try again later.");
-    //   });
+    const templateParams  = {
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      to_name: 'Kuvi Networks',
+      message: formData.message,
+      email: formData.email,
+      company: formData.company,
+      website: formData.website,
+    }
+    emailjs.send('service_69cycop', 'template_mycuhvp', templateParams, 'g5pmgFrFGd4Yn46ir')
+      .then((response) => {
+        console.log('Email sent successfully!', response.status, response.text);
+        setSuccessMessage("Thank you! Your message has been sent successfully.");
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          message: '',
+        });
+      })
+      .catch((error) => {
+        console.error('Failed to send email. Error:', error);
+        setSuccessMessage("Failed to send your message. Please try again later.");
+      });
     posthog?.capture('contact_form_submitted');
     setFormData({
       firstName: '',
