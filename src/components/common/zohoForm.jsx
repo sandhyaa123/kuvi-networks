@@ -5,7 +5,9 @@ const ZohoContactForm = () => {
   const iframeRef = useRef(null);
 
   useEffect(() => {
+    console.log('iframeRef useeffect', iframeRef, iframeRef.current);
     const handleResize = (event) => {
+        
       if (event.data && typeof event.data === 'string') {
         const iframeData = event.data.split('|');
 
@@ -26,11 +28,14 @@ const ZohoContactForm = () => {
     };
 
     window.addEventListener('message', handleResize);
+    
 
     return () => {
       window.removeEventListener('message', handleResize);
     };
   }, []);
+
+  console.log('iframeRef', iframeRef, iframeRef.current);
 
   return (
 <section className="py-16 md:py-12 bg-indigo-50">
@@ -41,12 +46,21 @@ const ZohoContactForm = () => {
       <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
     </div>
     <iframe
-  src="https://forms.zohopublic.in/hrkuvine1/form/Contactus/formperma/lrtdE1cWz9hlzW089wY-EP1Zx7JzmAx00zoZuXj3edY?zf_rszfm=1"
+    ref={iframeRef}
+  src="https://forms.zohopublic.in/sandhyakumari3122003gm1/form/contactus/formperma/YkDa60_071_GEk7KQ4ebHzJujkpQFjxiH2-uVMcrP0A"
   title="Contact Us"
   frameBorder="0"
   style={{ width: '100%', height: '1112px', border: 'none', transition: 'all 0.5s ease' }}
   aria-label="Contact Us"
 />
+<iframe
+
+       src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__5PbB1xUNVJJNVExWVRJODFETFA2VUhQVUVQNDdIVy4u&embed=true" 
+       title="Contact Us"
+       frameBorder="0"
+       style={{ width: '100%', height: '93rem', border: 'none', transition: 'all 0.5s ease' }}
+       aria-label="Contact Us"
+          > </iframe>
   </div>
 </div>
 

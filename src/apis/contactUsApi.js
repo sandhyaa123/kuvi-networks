@@ -11,48 +11,42 @@ import qs from 'qs';
 //      --header 'Content-Type: application/json' \
 //      --header 'accept: application/json' \
 //      --header 'x-api-key: caMog8SFc9Buto9AFMfwEQ'
+const BASE_URL = '/api/v1/contacts';  // Use the proxy prefix
 
-const BASE_URL = 'https://api.apollo.io/api/v1/contacts';
 export const createContact = async (formData) => {
-    try {
+  try {
     const data = {
-        first_name: formData?.firstName,
-        email: formData?.email,
-        message: formData?.message,
-      };
+      first_name: formData?.firstName,
+      email: formData?.email,
+      message: formData?.message,
+    };
 
-      if (formData?.lastName) {
-        data.last_name = formData?.lastName;
-      }
-
-      if (formData?.company) {
-        data.organization_name = formData?.company;
-      }
-
-      if (formData?.website) {
-        data.website_url = formData?.website;
-      }
-
-      const apiData = qs.stringify(data);
-  
-      // Manually append the label as plain text
-      const apiUrl = `${BASE_URL}?${apiData}&label_names[]=Website-users`;
-  
-      console.log('Final URL:', apiUrl);
-  
-    const response = await axios.post(apiUrl, {}, {
-         headers: {
-          'Cache-Control': 'no-cache',
-          'Content-Type': 'application/json',
-          'accept': 'application/json',
-          'x-api-key': 'ZcVy6PnJ4o4yOX7quHiRSQ',
-        },
-      });
-  
-      console.log('Response:', response.data);
-      return response.data;
-    } catch (error) {
-      console.error('Error creating contact:', error);
-      throw error;
+    if (formData?.lastName) {
+      data.last_name = formData?.lastName;
     }
-  };
+    if (formData?.company) {
+      data.organization_name = formData?.company;
+    }
+    if (formData?.website) {
+      data.website_url = formData?.website;
+    }
+
+    const apiData = qs.stringify(data);
+    const apiUrl = `${BASE_URL}?${apiData}&label_names[]=Website-users`;
+
+    const response = await axios.post(apiUrl, {}, {
+      headers: {
+        'Cache-Control': 'no-cache',
+        'Content-Type': 'application/json',
+        'accept': 'application/json',
+        'x-api-key': 'caMog8SFc9Buto9AFMfwEQ',
+      },
+    });
+
+    console.log('Response:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('Error creating contact:', error);
+    throw error;
+  }
+};

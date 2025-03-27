@@ -26,19 +26,6 @@ const ContactUs = () => {
   const handleSubmit = async(e) => {
    try {
     e.preventDefault();
-
-    const { firstName, lastName, email, company, website, message } = formData;
-
-    const templateParams = {
-      title: 'Kuvi Networks',
-      firstName,
-      lastName,
-      email,
-      company,
-      website,
-      message,
-    };
-    console.log('tem', templateParams);
     await createContact(formData);
 
     // emailjs.send('service_19aphcn', 'template_f6j719q', templateParams, 'SL8MHqyHZZfP6QhQA')
@@ -57,6 +44,14 @@ const ContactUs = () => {
     //     setSuccessMessage("Failed to send your message. Please try again later.");
     //   });
     posthog?.capture('contact_form_submitted');
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      company: '',
+      website: '',
+      message: '',
+          });
     setSuccessMessage("Thank you! Your message has been sent successfully.");
 
    }
