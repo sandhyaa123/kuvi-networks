@@ -11,7 +11,7 @@ import qs from 'qs';
 //      --header 'Content-Type: application/json' \
 //      --header 'accept: application/json' \
 //      --header 'x-api-key: caMog8SFc9Buto9AFMfwEQ'
-const BASE_URL = '/api/v1/contacts';  // Proxy path
+const BASE_URL = '/api/v1/contacts';  // Use the proxy path
 
 export const createContact = async (formData) => {
   try {

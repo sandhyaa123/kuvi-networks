@@ -7,11 +7,14 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api.apollo.io',
+        target: 'https://api.apollo.io',   // External API
         changeOrigin: true,
         secure: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api/, '/api'),  // Ensure correct path
       },
     },
   },
+  build: {
+    outDir: 'dist',
+  }
 })
