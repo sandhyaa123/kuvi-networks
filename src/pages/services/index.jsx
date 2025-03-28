@@ -20,8 +20,8 @@ const Services = () => {
         <div className="bg-indigo-50 rounded-2xl mb-24 text-center p-10 mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8 lg:py-24 max-w-7xl">
           <div className="mx-auto max-w-4xl">
             <LabelHeading styleCss={'text-gray-800'}> Experience the difference – Build your team with confidence</LabelHeading>
-            <Paragraph> Join hundreds of businesses that have transformed their operations
-            with our innovative approach.</Paragraph>
+            {/* <Paragraph> Join hundreds of businesses that have transformed their operations
+            with our innovative approach.</Paragraph> */}
             <a
               href="https://calendly.com/kuvi-networks/explore-kuvi-networks"
               target="_blank"

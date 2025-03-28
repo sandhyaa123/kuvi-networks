@@ -63,13 +63,13 @@ const Navbar = () => {
           ref={menuRef} 
           className={`lg:flex lg:flex-row lg:relative lg:top-0 lg:bg-transparent lg:shadow-none lg:mt-0 bg-indigo-50 shadow-lg mt-2 ${isMenuOpen ? 'flex' : 'hidden'} peer-checked:flex flex-col items-center absolute top-16 left-0 right-0 z-50 transition-all duration-300 pb-2 lg:pb-0`}>
           
-          <Link 
+          {/* <Link 
             to="/" 
             className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
             onClick={handleMenuItemClick}
           >
             Home
-          </Link>
+          </Link> */}
 
           <Link 
             to="/how-it-works" 

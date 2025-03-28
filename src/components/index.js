@@ -12,6 +12,8 @@ import LabelHeading from "./typography/labelHeading";
 import Paragraph from "./typography/paragraph";
 import WhyUs from "./common/WhyUs";
 import ZohoContactForm from "./common/zohoForm";
+import  RefrensContactForm from "./common/newForm";
+
 export {
    Hero,
    ContactUs,
@@ -27,4 +29,5 @@ export {
    Paragraph,
    WhyUs,
    ZohoContactForm,
+   RefrensContactForm,
 }

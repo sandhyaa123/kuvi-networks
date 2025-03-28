@@ -47,9 +47,10 @@ const ServiceCard = ({ icon, title, description }) => (
 const Services = () => (
   <section className="py-20 bg-indigo-50">
     <div className="mx-auto px-6 container">
-      <div className="mx-auto text-center mb-16 max-w-3xl">
-        <Heading>Our services - Your end-to-end team management partner</Heading>
-        <Paragraph>We handle everything so you can focus on building the product you've always envisioned</Paragraph>
+      <div className="mx-auto text-center mb-16 max-w-6xl">
+        {/* <Heading>Our services - Your end-to-end team management partner</Heading> */}
+        <Heading>We handle everything so you can focus on building the product you've always envisioned</Heading>
+        {/* <Paragraph>We handle everything so you can focus on building the product you've always envisioned</Paragraph> */}
         <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
       </div>
       <div className="md:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-10">

@@ -24,8 +24,8 @@ const HowItWorksPage = () => {
            <div className="bg-indigo-50 rounded-2xl  text-center p-10">
           <div className="mx-auto px-4 sm:px-6 lg:px-0 py-16 max-w-7xl">
             <LabelHeading styleCss={'text-gray-800'}> Experience the difference – Build your team with confidence</LabelHeading>
-            <Paragraph> Join hundreds of businesses that have transformed their operations
-            with our innovative approach.</Paragraph>
+            {/* <Paragraph> Join hundreds of businesses that have transformed their operations
+            with our innovative approach.</Paragraph> */}
             <a
               href="https://calendly.com/kuvi-networks/explore-kuvi-networks"
               target="_blank"

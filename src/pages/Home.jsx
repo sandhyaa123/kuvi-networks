@@ -4,9 +4,10 @@ import {
     HowItWorks,
     Services,
     Testimonal,
-    ContactUs,
+    // ContactUs,
     Faq,
-    WhyUs
+    WhyUs,
+    RefrensContactForm
  } from "../components";
 const Home = () => {
 
@@ -23,7 +24,8 @@ const Home = () => {
       <Services />
       <WhyUs />
       <Testimonal />
-      <ContactUs />
+      {/* <ContactUs /> */}
+      <RefrensContactForm />
       <Faq />
     </div>
   );

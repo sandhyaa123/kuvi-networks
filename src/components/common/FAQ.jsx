@@ -6,9 +6,9 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: "What makes you different from other outsourcing agencies?",
+      question: "ow are you different than outsourcing agencies?",
       answer:
-        "We help you set up your own team with complete transparency and full control—ensuring no hidden costs.",
+        "You get your own team with your policies and control. We charge a fixed monthly service fee, while all other costs, including team salaries, are transparently passed on to you without any markup.",
     },
     {
       question: "Can you set up other teams as well?",
@@ -23,7 +23,7 @@ const Faq = () => {
     {
       question: "How do you ensure transparency and full control?",
       answer:
-        "We transfer team salaries and other costs to you without any markup, while you retain full control over defining the team's policies, salary structure, and culture.",
+        "We include you in offer letter communications with candidates. Likewise, all other factors (e.g., laptop, office space) are discussed and agreed upon with you in advance.",
     },
     {
       question: "Can I choose my own team members?",

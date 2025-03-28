@@ -41,8 +41,9 @@ const WhyUs = () => {
     <section className="py-20 bg-gray-50">
       <div className="mx-auto px-6 container">
         <div className="mx-auto text-center mb-16 max-w-3xl">
-          <Heading>Why choose us?</Heading>
-          <Paragraph>For exponential business growth and complete peace of mind</Paragraph>
+          {/* <Heading>Why choose us?</Heading> */}
+          <Heading>We ensure your exponential business growth</Heading>
+          {/* <Paragraph>For exponential business growth and complete peace of mind</Paragraph> */}
           <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
         </div>
         <div className="md:grid-cols-2 lg:grid-cols-4 grid grid-cols-1 gap-10">

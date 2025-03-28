@@ -1,8 +1,11 @@
 import { Heading, Paragraph } from "../../components";
+import { usePostHog } from 'posthog-js/react';
 
 
 
 const ApplicationProcess = () => {
+  const posthog = usePostHog();
+
     return (
         <section className="py-20 bg-gray-50">
   <div className="mx-auto px-6 container">
@@ -45,7 +48,22 @@ const ApplicationProcess = () => {
         </div>
       </div>
     </div>
+     
+     <div className="w-full flex justify-center mt-8">
+     <a 
+            href="https://forms.gle/sh68Te2Z5ZtoFsgt6" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="m-2 inline-flex border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 justify-center rounded-md py-3 px-8 bg-indigo-600 text-base font-medium text-indigo-50 shadow-sm"
+
+            onClick={() =>  posthog?.capture('join_us_page_apply_now_clicked')}
+          
+          >
+           Apply Now
+          </a>
+     </div>
   </div>
+  
 </section>
     )
 }
