@@ -4,24 +4,57 @@ import Heading from "../typography/Heading";
 import Paragraph from "../typography/paragraph";
 import { usePostHog } from 'posthog-js/react';
 
-const Hero = () => {
-    const posthog = usePostHog();
-    const [showFirst, setShowFirst] = useState(true);
 
+ function AnimatedText() {
+    const [activeIndex, setActiveIndex] = useState(0);
+    
+    const phrases = [
+      "Outsource tech team",
+      "<del>Outsource</del> tech team",
+      "Setup your own tech team",
+      "Setup your own tech team - with full control & transparency",
+    ];
+  
     useEffect(() => {
-        const interval = setInterval(() => {
-            setShowFirst((prevState) => !prevState);
-        }, 3000);
-
-        return () => clearInterval(interval);
+      const interval = setInterval(() => {
+        setActiveIndex(prev => prev < phrases.length - 1 ? prev + 1 : prev);
+      }, 2000); // Total animation duration per phrase
+  
+      return () => clearInterval(interval);
     }, []);
 
+    
+  
     return (
-        <div className="bg-indigo-50 relative overflow-hidden">
+      <div className="relative h-12 min-h-max border ">
+        {phrases.map((phrase, index) => (
+          <div
+            key={index}
+            className={`absolute w-full transition-transform duration-500 ease-in-out ${
+              activeIndex === index
+                ? 'animate-slideIn'
+                : 'animate-hideText'
+            }
+            ${activeIndex == phrases?.length - 1 ? 'bottom-2' : ''}
+                `}
+            dangerouslySetInnerHTML={{ __html: phrase }}
+          />
+        ))}
+      </div>
+    );
+  }
+  
+const Hero = () => {
+    const posthog = usePostHog();
+  
+   
+
+    return (
+        <div className="bg-indigo-50  relative overflow-hidden">
             <div className="mx-auto px-6 py-20 lg:py-20 container">
                 <div className="lg:flex-row items-center flex flex-col">
                     <div className="lg:w-1/2 lg:pr-12 lg:mb-0 mb-12">
-                        <Heading styleCss="text-indigo-900 relative leading-relaxed" >
+                        {/* <Heading styleCss="text-indigo-900 relative leading-relaxed" >
 
                             <div className={`inline-block relative w-32 min-w-64 h-10 mb-4 align-middle mr-2`}>
                                 <span
@@ -32,7 +65,7 @@ const Hero = () => {
                                     }}
                                     className="absolute top-0 left-0 inline-block w-full text-center"
                                 >
-                                    Setup
+                                    Setup 🛠️
                                 </span>
                                 <span
                                     style={{
@@ -47,24 +80,10 @@ const Hero = () => {
                             </div>
 
                             your own tech team - with full control & transparency
+                        </Heading> */}
+                        <Heading>
+                          <AnimatedText />
                         </Heading>
-
-                        {/* <Heading styleCss="text-indigo-900" >
-    <span className="relative ml-3 h-[1em] w-36 overflow-hidden">
-    <span
-      className="absolute h-full w-full -translate-y-full animate-slide leading-none"
-    >
-        Setup
-       </span>
-
-     <span
-       className="absolute h-full w-full -translate-y-full animate-slide leading-none [animation-delay:0.83s]"
-       >
-        Outsource
-       </span>
-       </span>
-      your own tech team - with full control & transparency
-     </Heading> */}
 
 
                         <Paragraph>

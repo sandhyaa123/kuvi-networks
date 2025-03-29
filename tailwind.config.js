@@ -7,15 +7,17 @@ export default {
   theme: {
     extend: {
       animation: {
-        slide: "slide 2.5s linear infinite",
+        slideIn: "slideIn 0.5s ease forwards",
+        hideText: "hideText 0.5s ease forwards",
       },
       keyframes: {
-        slide: {
-          "0%": { transform: "translateY(100%)", opacity: 0.1 },
-          "15%": { transform: "translateY(0)", opacity: 1 },
-          "30%": { transform: "translateY(0)", opacity: 1 },
-          "45%": { transform: "translateY(-100%)", opacity: 1 },
-          "100%": { transform: "translateY(-100%)", opacity: 0.1 },
+        slideIn: {
+          "0%": { transform: "translateY(-50%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
+        hideText: {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
         },
       },
     },
