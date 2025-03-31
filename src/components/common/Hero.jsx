@@ -26,16 +26,16 @@ import { usePostHog } from 'posthog-js/react';
     
   
     return (
-      <div className="relative h-12 min-h-max border ">
+      <div className="relative h-32  md:h-12 min-h-max ">
         {phrases.map((phrase, index) => (
           <div
             key={index}
-            className={`absolute w-full transition-transform duration-500 ease-in-out ${
+            className={`absolute w-full transition-transform duration-500 ease-in-out bottom-2 md:bottom-0 ${
               activeIndex === index
                 ? 'animate-slideIn'
                 : 'animate-hideText'
             }
-            ${activeIndex == phrases?.length - 1 ? 'bottom-2' : ''}
+            ${activeIndex == phrases?.length - 1 ? 'md:bottom-2' : ''}
                 `}
             dangerouslySetInnerHTML={{ __html: phrase }}
           />
@@ -117,76 +117,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-// import React, { useState, useEffect } from 'react';
-
-// const HeadingSwitcher = () => {
-//   const [showFirst, setShowFirst] = useState(true);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setShowFirst(prevState => !prevState);
-//     }, 3000);
-
-//     // Cleanup interval on component unmount
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   return (
-//     <div className="flex items-center justify-center bg-white py-12 px-4 sm:px-6 lg:px-8 min-h-screen">
-//       <div className="w-full max-w-4xl">
-//         <div className="text-center">
-//           <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight"></p>
-//           <div className="h-14 sm:h-16 md:h-20 mb-4 relative">
-//             {/* Heading 1 */}
-//             <div
-//               style={{
-//                 opacity: showFirst ? '1' : '0',
-//                 transform: showFirst ? 'translateY(0px)' : 'translateY(-20px)',
-//                 transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
-//               }}
-//               className="w-full absolute"
-//             >
-//               <span
-//                 className="text-indigo-600"
-//                 style={{
-//                   opacity: showFirst ? '1' : '0',
-//                   transform: showFirst ? 'translateY(0px)' : 'translateY(-10px)',
-//                   transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
-//                 }}
-//               >
-//                 Setup
-//               </span>
-//               your own tech team – with full control & transparency
-//             </div>
-//             {/* Heading 2 */}
-//             <div
-//               style={{
-//                 opacity: showFirst ? '0' : '1',
-//                 transform: showFirst ? 'translateY(20px)' : 'translateY(0px)',
-//                 transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
-//               }}
-//               className="w-full absolute"
-//             >
-//               <span
-//                 className="text-indigo-600"
-//                 style={{
-//                   opacity: showFirst ? '0' : '1',
-//                   transform: showFirst ? 'translateY(10px)' : 'translateY(0px)',
-//                   transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
-//                 }}
-//               >
-//                 Outsource
-//               </span>
-//               your own tech team – with full control & transparency
-//             </div>
-//           </div>
-//           <p></p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HeadingSwitcher;
