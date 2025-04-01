@@ -42,14 +42,14 @@ const AnimatedText = ({ showAdditionalText, setShowAdditionalText }) => {
     return (
         <span className="flex justify-center flex-col flex-wrap items-start transition-all duration-300">
             <span className="text-center relative">
-                <span className="block text-start min-h-max">
+                <span className="block text-center min-h-max">
                     <span
                         ref={firstWordRef}
-                        className={` transition-all ease-in duration-500 ${isAnimating ? 'animate-slideDown' : ''}`}
+                        className={`inline-flex transition-all ease-in duration-500 ${isAnimating ? 'animate-slideDown' : ''}`}
                         dangerouslySetInnerHTML={{ __html: firstWord }}
                     />{' '}
-                    {/* your tech team */}
-                    <span className="inline-block">your tech team</span>
+                    your tech team
+                    {/* <span className="inline-block">your tech team</span> */}
                 </span>
                 <span
                     className={`absolute text-start left-0 right-0 transition-all duration-500 ${
@@ -73,7 +73,7 @@ const Hero = () => {
                 <div className="flex flex-col lg:flex-row items-center">
                 
                     {/* Text Content */}
-                    <div className="lg:w-3/5 lg:pr-12 lg:mb-0 mb-12 ">
+                    <div className="lg:w-1/2 lg:pr-12 lg:mb-0 mb-12 ">
                         <Heading styleCss={`text-indigo-900 `}>
                             <AnimatedText 
                               showAdditionalText={showAdditionalText} 
