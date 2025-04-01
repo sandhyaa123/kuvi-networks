@@ -1,5 +1,39 @@
 import { LabelHeading } from "../../components";
 
+const tableData = [
+  {
+    feature: "Team control",
+    kuviValue: "Full control over policies",
+    traditionalValue: "Limited or no control",
+    freelanceValue: "Control but requires direct management",
+  },
+  {
+    feature: "Transparency",
+    kuviValue: "Direct access to your team",
+    traditionalValue: "Indirect access",
+    freelanceValue: "Inconsistency in updates",
+  },
+  {
+    feature: "Hidden costs",
+    kuviValue: "No hidden fees",
+    traditionalValue: "Potential hidden charges",
+    freelanceValue:
+      "Many hidden costs like Platform fees, revisions, extra time spent",
+  },
+  {
+    feature: "Flexibility",
+    kuviValue: "Easy team scaling",
+    traditionalValue: "Rigid contracts",
+    freelanceValue: "Difficulty in reaching out and hiring",
+  },
+  {
+    feature: "Legal compliance",
+    kuviValue: "Handled by us",
+    traditionalValue: "Not always included",
+    freelanceValue: "You bear all legal risks & compliance issues",
+  },
+];
+
 const CheckIcon = () => (
   <svg
     className="w-5 h-5 mr-2 text-green-500"
@@ -59,54 +93,16 @@ const TableRow = ({ feature, kuviValue, traditionalValue, freelanceValue }) => (
     </td>
   </tr>
 );
-
 const WhyUsTable = () => {
-  const tableData = [
-    {
-      feature: "Team control",
-      kuviValue: "Full control over policies",
-      traditionalValue: "Limited or no control",
-      freelanceValue: "Control but requires direct management",
-
-    },
-    {
-      feature: "Transparency",
-      kuviValue: "Direct access to your team",
-      traditionalValue: "Indirect access",
-      freelanceValue: "Inconsistency in updates",
-
-    },
-    {
-      feature: "Hidden costs",
-      kuviValue: "No hidden fees",
-      traditionalValue: "Potential hidden charges",
-      freelanceValue: "Many hidden costs like Platform fees, revisions, extra time spent",
-
-    },
-    {
-      feature: "Flexibility",
-      kuviValue: "Easy team scaling",
-      traditionalValue: "Rigid contracts",
-      freelanceValue: "Difficulty in reaching out and hiring",
-
-    },
-    {
-      feature: "Legal compliance",
-      kuviValue: "Handled by us",
-      traditionalValue: "Not always included",
-      freelanceValue: "You bear all legal risks & compliance issues",
-
-    },
-  ];
-
   return (
-    <div className="mb-24">
+    <div className="mb-16">
       <div className="mb-12">
         <LabelHeading styleCss="text-gray-800 text-center">
           How we deliver more value than traditional agencies
         </LabelHeading>
       </div>
-      <div className="bg-white rounded-xl shadow-lg overflow-x-auto">
+      {/* Scrollable Table Container with Custom Scrollbar */}
+      <div className="bg-white rounded-xl shadow-lg overflow-x-auto custom-scrollbar">
         <table className="min-w-full">
           <thead>
             <tr>
@@ -117,11 +113,11 @@ const WhyUsTable = () => {
                 Kuvi Networks
               </th>
               <th className="px-6 py-5 bg-indigo-600 text-white text-left text-lg font-semibold">
-              Outsourcing Agencies
+                Outsourcing Agencies
               </th>
               <th className="px-6 py-5 bg-indigo-600 text-white text-left text-lg font-semibold">
                 Freelancers / UpWork
-                </th>
+              </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">

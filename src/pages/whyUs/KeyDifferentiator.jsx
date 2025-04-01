@@ -3,7 +3,7 @@ import { LabelHeading, Paragraph } from "../../components";
 const differentiatorsData = [
   {
     id: 1,
-    emoji: "🛠️",
+    emoji: "👥",
     title: "Your own team",
     description: "You dictate policies, salary structures, and hikes.",
   },
@@ -21,7 +21,7 @@ const differentiatorsData = [
   },
   {
     id: 4,
-    emoji: "🔥",
+    emoji: "🔄",
     title: "End-to-end management",
     description: "We handle everything beyond product building.",
   },
@@ -34,7 +34,7 @@ const differentiatorsData = [
 ];
 
 const DifferentiatorCard = ({ emoji, title, description }) => (
-  <div className="bg-white rounded-xl shadow-lg p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl border-b-4 border-indigo-600">
+  <div className="bg-white rounded-xl shadow-lg p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl">
     <div className="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
       <span className="text-3xl">{emoji}</span>
     </div>
@@ -48,7 +48,7 @@ const KeyDifferentiator = () => {
     <div className="mb-24">
       <div className="mb-12">
         <LabelHeading styleCss="text-gray-800 text-center">
-          ⚡ Our key differentiators
+          Our key differentiators
         </LabelHeading>
       </div>
       <div className="md:grid-cols-2 lg:grid-cols-5 grid grid-cols-1 gap-8">

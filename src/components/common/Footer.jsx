@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.jpg";
+import { usePostHog } from 'posthog-js/react';
 
 const Footer = () => {
   const handleMenuItemClick = () => {
@@ -8,6 +9,8 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+    const posthog = usePostHog();
+  
 
   return (
     <footer className="bg-gray-100">
@@ -109,12 +112,15 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://calendly.com/kuvi-networks/explore-kuvi-networks"
-                  target="_blank"
-                  className="text-gray-600 text-sm hover:text-indigo-600 transition duration-300 hover:underline"
-                >
-                  Schedule a call
-                </a>
+              href="https://calendly.com/kuvi-networks/explore-kuvi-networks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 justify-center rounded-md py-2 px-4 bg-indigo-600 text-base font-medium text-indigo-50 shadow-sm"
+              onClick={() =>  posthog?.capture('footer_schedule_call_clicked')}
+
+           >
+              Schedule a Call
+            </a>
               </li>
             </ul>
           </div>

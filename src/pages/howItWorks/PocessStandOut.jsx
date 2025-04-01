@@ -109,7 +109,7 @@ const ProcessCard = ({ icon, title, description }) => (
 
 const ProcessStandOut = () => {
   return (
-    <div className="py-28 bg-gray-50">
+    <div className="py-12 bg-gray-50">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center">
           <Heading>Why our process stands out?</Heading>

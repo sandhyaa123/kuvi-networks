@@ -4,10 +4,8 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter as Router } from "react-router-dom";
 import { PostHogProvider } from "posthog-js/react";
-
-const POSTHOG_API_KEY = import.meta.env.VITE_POSTHOG_API_KEY;
-const POSTHOG_HOST = import.meta.env.VITE_POSTHOG_HOST;
-
+const POSTHOG_API_KEY = 'phc_i7npfVmnjHRtdNaCDB9eU10SYm8kaTgWZMSWxEIqm88';
+const POSTHOG_HOST = 'https://us.i.posthog.com/';
 const postHogOptions = {
   api_host: POSTHOG_HOST,
 };

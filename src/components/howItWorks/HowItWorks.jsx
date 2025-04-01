@@ -40,7 +40,7 @@ const HowItWorks = () => {
         <div className="mb-8">
           <Heading styleCss="text-center">How it works</Heading>
           <Paragraph styleCss="text-center">
-            Our streamlined process ensures efficiency and clarity at every step of your journey with us
+          Simple, transparent and hassle-free onboarding and management 
           </Paragraph>
           <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
         </div>

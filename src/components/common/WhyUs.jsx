@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const featuresData = [
   {
-    icon: "🛠️",
+    icon: "👥",
     title: "Your own team",
     description:
       "Your dedicated team, working seamlessly under policies, salary guidelines, and cultural principles - defined by you",
@@ -22,7 +22,7 @@ const featuresData = [
     description: "Direct communication with your team – no middlemen, no hidden costs",
   },
   {
-    icon: "✅",
+    icon: "🔄",
     title: "End-to-end management",
     description: "HR, finance, and admin – we handle everything, so you don't have to",
   },

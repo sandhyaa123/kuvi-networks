@@ -11,7 +11,7 @@ const steps = [
     number: 1,
     title: "Step 1: Initial consultation",
     description:
-      "We start by understanding your specific team requirements, including skills, experience, and team size",
+      " We begin by identifying your specific team needs, including required skills, experience, and team size.",
     inclusions: [
       "Free consultation with an expert",
       "Detailed needs analysis",
@@ -41,7 +41,7 @@ const steps = [
     number: 2,
     title: "Step 2: Talent sourcing",
     description:
-      "Our recruitment specialists source, vet, and hire the best talent in India based on your requirements",
+      "Our recruitment specialists source, vet, and hire the best talent in India based on your requirements.",
     inclusions: [
       "Tailored sourcing and recruiting",
       "Thorough background and skills verification",
@@ -71,7 +71,7 @@ const steps = [
     number: 3,
     title: "Step 3: Onboarding & setup",
     description:
-      "We take care of the complete onboarding process, including legal documentation, payroll setup, and workspace infrastructure",
+      " We handle the entire onboarding process, including legal documentation, payroll setup,and workspace arrangements.",
     inclusions: [
       "Legal documentation and contracts",
       "Payroll setup with direct payment channels",
@@ -107,7 +107,7 @@ const steps = [
     number: 4,
     title: "Step 4: Fixed service fee",
     description:
-      "We offer a transparent and predictable pricing model with a fixed monthly service fee",
+      "We offer a transparent and predictable pricing model with a fixed monthly service fee.",
     inclusions: [
       "Transparent pricing model",
       "Full cost visibility",
@@ -136,7 +136,7 @@ const steps = [
     number: 5,
     title: "Step 5: Ongoing management",
     description:
-      "We handle day-to-day operations, including HR management, payroll processing, and legal compliance",
+      "We handle all day to day operations, including HR administration, payroll processing, and legal compliance.we p",
     inclusions: [
       "Regular performance reviews",
       "Payroll and benefits administration",
@@ -209,10 +209,10 @@ const ProessSteps = () => {
   
   return (
     <div>
-      <div className="py-16 bg-white">
+      <div className="md:py-16 pb-8 pt-16 bg-white">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="text-center">
-            <Heading>Your team-building journey in one glance</Heading>
+            <Heading>Your team-building journey in a glance</Heading>
           </div>
           <div className="mt-12 mx-auto max-w-5xl">
             <div className="relative">
@@ -354,7 +354,7 @@ const ProessSteps = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto px-4 py-16 container">
+      <div className="mx-auto px-4 md:py-16 py-8 container">
         {steps.map((step) => (
           <div
             className="md:flex-row items-center mb-16 flex flex-col gap-8"

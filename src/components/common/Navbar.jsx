@@ -32,9 +32,9 @@ const Navbar = () => {
   return (
     <nav className="bg-indigo-50 shadow-lg p-4 fixed w-full top-0 z-50 text-indigo-900">
       <div className="container mx-auto flex items-center justify-between">
-        <Link to="/" className="text-black font-bold text-xl items-center md:gap-2 md:flex">
+        <Link to="/" className="text-black font-bold text-xl items-center md:gap-2 gap-1 flex">
           <img
-            className="bg-transparent hidden md:block mix-blend-multiply"
+            className="bg-transparent block mix-blend-multiply"
             src={logo}
             alt="Logo"
           />
@@ -61,7 +61,7 @@ const Navbar = () => {
 
         <div 
           ref={menuRef} 
-          className={`lg:flex lg:flex-row lg:relative lg:top-0 lg:bg-transparent lg:shadow-none lg:mt-0 bg-indigo-50 shadow-lg mt-2 ${isMenuOpen ? 'flex' : 'hidden'} peer-checked:flex flex-col items-center absolute top-16 left-0 right-0 z-50 transition-all duration-300 pb-2 lg:pb-0`}>
+          className={`lg:flex lg:flex-row lg:relative lg:top-0 lg:bg-transparent lg:shadow-none lg:mt-0 bg-indigo-50 shadow-lg mt-6 ${isMenuOpen ? 'flex' : 'hidden'} peer-checked:flex flex-col items-center absolute top-16 left-0 right-0 z-50 transition-all duration-300 pb-2 lg:pb-0`}>
           
           {/* <Link 
             to="/" 
@@ -73,7 +73,7 @@ const Navbar = () => {
 
           <Link 
             to="/how-it-works" 
-            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
+            className="text-indigo-900 px-4 py-2 text-[1.2rem] md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
             onClick={handleMenuItemClick}
           >
             How it works
@@ -81,7 +81,7 @@ const Navbar = () => {
 
           <Link 
             to="/services" 
-            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
+            className="text-indigo-900 px-4 py-2 text-[1.2rem] md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
             onClick={handleMenuItemClick}
           >
            Our services
@@ -89,7 +89,7 @@ const Navbar = () => {
 
           <Link 
             to="/why-us" 
-            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
+            className="text-indigo-900 px-4 py-2 text-[1.2rem] md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
             onClick={handleMenuItemClick}
           >
             Why us
@@ -97,7 +97,7 @@ const Navbar = () => {
 
           <Link 
             to="/join-us" 
-            className="text-indigo-900 px-4 py-2 text-sm md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
+            className="text-indigo-900 px-4 py-2 text-[1.2rem] md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
             onClick={handleMenuItemClick}
           >
             Join us
