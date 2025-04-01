@@ -34,11 +34,11 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/" className="text-black font-bold text-xl items-center md:gap-2 md:flex">
           <img
-            className="bg-transparent mix-blend-multiply"
+            className="bg-transparent hidden md:block mix-blend-multiply"
             src={logo}
             alt="Logo"
           />
-          <div className="hidden md:flex flex-col justify-start">
+          <div className="flex flex-col justify-start">
             Kuvi 
             <span>Networks</span>
           </div>
@@ -52,10 +52,10 @@ const Navbar = () => {
           onChange={() => setIsMenuOpen(!isMenuOpen)}
         />
         <label htmlFor="menu-toggle" className="lg:hidden block cursor-pointer" aria-label="Menu">
-          <div className="space-y-2">
-            <span className="w-8 h-1 bg-indigo-950 rounded-full block transition-all duration-300"></span>
-            <span className="w-8 h-1 bg-indigo-950 rounded-full block transition-all duration-300"></span>
-            <span className="w-8 h-1 bg-indigo-950 rounded-full block transition-all duration-300"></span>
+          <div className="space-y-1 md:space-y-2">
+            <span className="w-6 h-1 md:w-8 bg-indigo-950 rounded-full block transition-all duration-300"></span>
+            <span className="w-6 h-1 md:w-8 bg-indigo-950 rounded-full block transition-all duration-300"></span>
+            <span className="w-6 h-1 md:w-8 bg-indigo-950 rounded-full block transition-all duration-300"></span>
           </div>
         </label>
 

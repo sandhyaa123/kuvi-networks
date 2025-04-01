@@ -1,5 +1,8 @@
 import { Heading, Paragraph } from "../../components";
-import joinusImage from "../../assets/images/joinus.jpeg";
+// import joinusImage from "../../assets/images/joinus.jpeg";
+// import teamPhoto from "../../assets/images/1000058750.jpg"
+import teamPhoto from "../../assets/images/1000058750.jpg"
+
 
 const JoinUsHero = () => {
   
@@ -8,8 +11,8 @@ const JoinUsHero = () => {
   <div className="absolute inset-0 z-0">
     <img
      alt="Diverse professionals collaborating"
-    src={joinusImage}
-     className="object-cover opacity-30 w-full h-full" />
+    src={teamPhoto}
+     className="object-cover opacity-40 w-full h-full" />
   </div>
   <div className="mx-auto px-4 py-16 md:py-24 lg:py-32 relative z-10 container">
     <div className="mx-auto text-center max-w-3xl">

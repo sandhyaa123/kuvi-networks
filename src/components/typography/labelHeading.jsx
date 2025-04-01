@@ -6,7 +6,7 @@ const LabelHeading = ({
      styleCss,
      }) => (
         
-   <p className={`text-2xl font-bold mb-3 ${color} ${styleCss}`}>
+   <p className={`text-xl font-bold mb-3 ${color} ${styleCss}`}>
     {children}
     </p>
 

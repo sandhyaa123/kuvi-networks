@@ -1,109 +1,118 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import diverseTeamColl from "../../assets/images/diverseTeamColl.jpeg";
 import Heading from "../typography/Heading";
 import Paragraph from "../typography/paragraph";
 import { usePostHog } from 'posthog-js/react';
 
-
- function AnimatedText() {
-    const [activeIndex, setActiveIndex] = useState(0);
-    
-    const phrases = [
-      "Outsource tech team",
-      "<del>Outsource</del> tech team",
-      "Setup your own tech team",
-      "Setup your own tech team - with full control & transparency",
-    ];
+const AnimatedText = ({ showAdditionalText, setShowAdditionalText }) => {
+    const [firstWord, setFirstWord] = useState('Outsource');
+    const [additionalText, setAdditionalText] = useState('');
+    const [isAnimating, setIsAnimating] = useState(false);
+    const firstWordRef = useRef(null);
   
     useEffect(() => {
-      const interval = setInterval(() => {
-        setActiveIndex(prev => prev < phrases.length - 1 ? prev + 1 : prev);
-      }, 2000); // Total animation duration per phrase
-  
-      return () => clearInterval(interval);
-    }, []);
+        const originalWidth = firstWordRef.current?.offsetWidth;
 
-    
-  
-    return (
-      <div className="relative h-32  md:h-12 min-h-max ">
-        {phrases.map((phrase, index) => (
-          <div
-            key={index}
-            className={`absolute w-full transition-transform duration-500 ease-in-out bottom-2 md:bottom-0 ${
-              activeIndex === index
-                ? 'animate-slideIn'
-                : 'animate-hideText'
+        const timer1 = setTimeout(() => {
+            setFirstWord('<s>Outsource</s>');
+
+            if (firstWordRef.current) {
+                firstWordRef.current.style.minWidth = `${originalWidth}px`;
             }
-            ${activeIndex == phrases?.length - 1 ? 'md:bottom-2' : ''}
-                `}
-            dangerouslySetInnerHTML={{ __html: phrase }}
-          />
-        ))}
-      </div>
+
+            const timer2 = setTimeout(() => {
+                setIsAnimating(true);
+                setFirstWord('Setup 🛠️ ');
+
+                const timer3 = setTimeout(() => {
+                    setIsAnimating(false);
+                    setAdditionalText(' - with full control and transparency');
+                    setShowAdditionalText(true);
+                }, 1000);
+
+                return () => clearTimeout(timer3);
+            }, 1000);
+
+            return () => clearTimeout(timer2);
+        }, 1000);
+
+        return () => clearTimeout(timer1);
+    }, [setShowAdditionalText]);
+
+    return (
+        <span className="flex justify-center flex-col flex-wrap items-start transition-all duration-300">
+            <span className="text-center relative">
+                <span className="block text-start min-h-max">
+                    <span
+                        ref={firstWordRef}
+                        className={` transition-all ease-in duration-500 ${isAnimating ? 'animate-slideDown' : ''}`}
+                        dangerouslySetInnerHTML={{ __html: firstWord }}
+                    />{' '}
+                    {/* your tech team */}
+                    <span className="inline-block">your tech team</span>
+                </span>
+                <span
+                    className={`absolute text-start left-0 right-0 transition-all duration-500 ${
+                        showAdditionalText ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
+                    }`}
+                >
+                    {additionalText}
+                </span>
+            </span>
+        </span>
     );
-  }
-  
+};
+
 const Hero = () => {
     const posthog = usePostHog();
+    const [showAdditionalText, setShowAdditionalText] = useState(false);
   
-   
-
     return (
-        <div className="bg-indigo-50  relative overflow-hidden">
-            <div className="mx-auto px-6 py-20 lg:py-20 container">
-                <div className="lg:flex-row items-center flex flex-col">
-                    <div className="lg:w-1/2 lg:pr-12 lg:mb-0 mb-12">
-                        {/* <Heading styleCss="text-indigo-900 relative leading-relaxed" >
-
-                            <div className={`inline-block relative w-32 min-w-64 h-10 mb-4 align-middle mr-2`}>
-                                <span
-                                    style={{
-                                        opacity: showFirst ? '1' : '0',
-                                        transform: showFirst ? 'translateY(0)' : 'translateY(-110%)',
-                                        transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
-                                    }}
-                                    className="absolute top-0 left-0 inline-block w-full text-center"
-                                >
-                                    Setup 🛠️
-                                </span>
-                                <span
-                                    style={{
-                                        opacity: showFirst ? '0' : '1',
-                                        transform: showFirst ? 'translateY(110%)' : 'translateY(0)',
-                                        transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
-                                    }}
-                                    className="absolute top-0 left-0 inline-block w-full text-center"
-                                >
-                                    Outsource
-                                </span>
-                            </div>
-
-                            your own tech team - with full control & transparency
-                        </Heading> */}
-                        <Heading>
-                          <AnimatedText />
+        <div className="bg-indigo-50 relative overflow-hidden">
+            <div className="mx-auto px-6 pb-20 pt-10 lg:py-20 container">
+                <div className="flex flex-col lg:flex-row items-center">
+                
+                    {/* Text Content */}
+                    <div className="lg:w-3/5 lg:pr-12 lg:mb-0 mb-12 ">
+                        <Heading styleCss={`text-indigo-900 `}>
+                            <AnimatedText 
+                              showAdditionalText={showAdditionalText} 
+                              setShowAdditionalText={setShowAdditionalText} 
+                            />
                         </Heading>
 
+                        {/* Animated paragraph transition */}
+                        {/* <div className={`transition-all duration-500 max-w-[90%] flex flex-col items-start ${
+                            showAdditionalText ? 'translate-y-14 md:translate-y-16 opacity-100' : 'translate-y-0 opacity-100'
+                        }`}> */}
+                            <Paragraph styleCss={`text-start transition-all duration-500 max-w-[90%] ${
+                            showAdditionalText ? 'translate-y-14 md:translate-y-20 opacity-100' : 'translate-y-0 opacity-100'
+                        }`} >
+                                Focus on building your product while we handle the rest – from
+                                hiring to onboarding, payroll, compliance, procurement, etc.
+                            </Paragraph>
 
-                        <Paragraph>
-                            Focus on building your product while we handle the rest – from
-                            hiring to onboarding, payroll, compliance, procurement, etc.
-                        </Paragraph>
-
-                        <a
-                            href="https://calendly.com/kuvi-networks/explore-kuvi-networks"
-                            target="_blank"
-                            className="inline-flex border border-indigo-500 focus:outline-none focus:ring-2
-                          focus:ring-indigo-500 focus:ring-offset-2 hover:bg-indigo-700 transition-all duration-300 transform
-                          hover:scale-105 justify-center rounded-md py-3 px-8 bg-indigo-600 text-base font-medium text-white
-                          shadow-sm"
-                            onClick={() => posthog?.capture('home_page_schedule_call_clicked')}
-                        >
-                            Schedule a free consultation
-                        </a>
+                            {/* Call to Action Button */}
+                            <a
+                                href="https://calendly.com/kuvi-networks/explore-kuvi-networks"
+                                target="_blank"
+                                className={`inline-flex border border-indigo-500 focus:outline-none focus:ring-2
+                                focus:ring-indigo-500 focus:ring-offset-2 hover:bg-indigo-700 transform
+                                hover:scale-105 justify-center rounded-md py-3 px-6 bg-indigo-600 text-base font-medium text-white
+                                shadow-sm mt-4 w-full md:w-1/2 lg:w-auto
+                                transition-all duration-500 max-w-[90%] ${
+                                    showAdditionalText ? 'translate-y-14 md:translate-y-16 opacity-100' : 'translate-y-0 opacity-100'
+                                }
+                            `}
+                                onClick={() => posthog?.capture('home_page_schedule_call_clicked')}
+                            >
+                                Schedule a free consultation
+                            </a>
+                        {/* </div> */}
                     </div>
-                    <div className="lg:w-1/2 relative">
+                    <div className={`lg:w-1/3 transition-all duration-500 max-w-[90%] mx-auto ${
+                            showAdditionalText ? 'translate-y-14 lg:translate-y-0 opacity-100' : 'translate-y-0 opacity-100' }
+                        `}>
                         <img
                             alt="A diverse, professional team collaborating in a modern office"
                             src={diverseTeamColl}
@@ -116,4 +125,7 @@ const Hero = () => {
     );
 };
 
+
 export default Hero;
+
+

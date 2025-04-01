@@ -34,7 +34,7 @@ const CrossIcon = () => (
   </svg>
 );
 
-const TableRow = ({ feature, kuviValue, traditionalValue }) => (
+const TableRow = ({ feature, kuviValue, traditionalValue, freelanceValue }) => (
   <tr className="hover:bg-gray-50 transition duration-200">
     <td className="px-6 py-5 text-sm font-medium text-gray-800 whitespace-nowrap">
       {feature}
@@ -51,6 +51,12 @@ const TableRow = ({ feature, kuviValue, traditionalValue }) => (
         {traditionalValue}
       </div>
     </td>
+    <td className="px-6 py-5 text-sm text-gray-600 whitespace-nowrap">
+      <div className="flex items-center">
+        <CrossIcon />
+        {freelanceValue}
+      </div>
+    </td>
   </tr>
 );
 
@@ -60,26 +66,36 @@ const WhyUsTable = () => {
       feature: "Team control",
       kuviValue: "Full control over policies",
       traditionalValue: "Limited or no control",
+      freelanceValue: "Control but requires direct management",
+
     },
     {
       feature: "Transparency",
       kuviValue: "Direct access to your team",
       traditionalValue: "Indirect access",
+      freelanceValue: "Inconsistency in updates",
+
     },
     {
       feature: "Hidden costs",
       kuviValue: "No hidden fees",
       traditionalValue: "Potential hidden charges",
+      freelanceValue: "Many hidden costs like Platform fees, revisions, extra time spent",
+
     },
     {
       feature: "Flexibility",
       kuviValue: "Easy team scaling",
       traditionalValue: "Rigid contracts",
+      freelanceValue: "Difficulty in reaching out and hiring",
+
     },
     {
       feature: "Legal compliance",
       kuviValue: "Handled by us",
       traditionalValue: "Not always included",
+      freelanceValue: "You bear all legal risks & compliance issues",
+
     },
   ];
 
@@ -95,23 +111,27 @@ const WhyUsTable = () => {
           <thead>
             <tr>
               <th className="px-6 py-5 bg-indigo-600 text-white text-left text-lg font-semibold">
-                Feature
+                Features
               </th>
               <th className="px-6 py-5 bg-indigo-600 text-white text-left text-lg font-semibold">
                 Kuvi Networks
               </th>
               <th className="px-6 py-5 bg-indigo-600 text-white text-left text-lg font-semibold">
-                Traditional Agencies
+              Outsourcing Agencies
               </th>
+              <th className="px-6 py-5 bg-indigo-600 text-white text-left text-lg font-semibold">
+                Freelancers / UpWork
+                </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
             {tableData.map((row, index) => (
               <TableRow
                 key={index}
-                feature={row.feature}
-                kuviValue={row.kuviValue}
-                traditionalValue={row.traditionalValue}
+                feature={row?.feature}
+                kuviValue={row?.kuviValue}
+                traditionalValue={row?.traditionalValue}
+                freelanceValue={row?.freelanceValue}
               />
             ))}
           </tbody>

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import ApplicationProcess from "./applicationProcess";
 import JoinUsHero from "./JoinUsHero";
+// import PhotoGallery from "../../components/PhotoGallery";
 
 
 
@@ -15,6 +16,7 @@ const JoinUs = () => {
         <div className="bg-white min-h-screen">
            <JoinUsHero />
            <ApplicationProcess />
+           {/* <PhotoGallery /> */}
         </div>
     );
 }

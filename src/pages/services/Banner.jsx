@@ -10,7 +10,7 @@ const ServiceBanner = () => {
       <div class="mx-auto max-w-7xl">
         <div class="pb-8 bg-indigo-700 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 relative z-10">
           <svg
-            class="lg:block h-full w-48 text-indigo-700 hidden absolute right-0 inset-y-0 transform translate-x-1/2"
+            class="lg:block h-full w-48 text-indigo-700 hidden absolute right-0 inset-y-0 transform translate-x-1/2 -z-10"
             fill="currentColor"
             viewBox="0 0 100 100"
             preserveAspectRatio="none"

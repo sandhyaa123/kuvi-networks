@@ -9,6 +9,8 @@ export default {
       animation: {
         slideIn: "slideIn 0.5s ease forwards",
         hideText: "hideText 0.5s ease forwards",
+        slideDown: "slideDown 0.5s ease-in-out",
+
       },
       keyframes: {
         slideIn: {
@@ -18,6 +20,10 @@ export default {
         hideText: {
           "0%": { opacity: 1 },
           "100%": { opacity: 0 },
+        },
+        slideDown: {
+          from: { transform: "translateY(-10px)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
         },
       },
     },

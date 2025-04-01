@@ -112,7 +112,7 @@ const ProcessStandOut = () => {
     <div className="py-28 bg-gray-50">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center">
-          <Heading>Why our process stands out</Heading>
+          <Heading>Why our process stands out?</Heading>
           <Paragraph styleCss={'mt-4 text-gray-500 mx-auto max-w-2xl'}>
             We offer more than just team-building – we provide full control, transparency, and long-term reliability
           </Paragraph>

@@ -4,7 +4,7 @@ import ongoing from "../../assets/images/ongoing.jpeg";
 import initialConsultation from "../../assets/images/initialConsultation.jpeg";
 import onboarding from "../../assets/images/onboarding.jpeg";
 import fixedPrice from "../../assets/images/fixedPrice.jpeg";
-import { usePostHog } from 'posthog-js/react';
+// import { usePostHog } from 'posthog-js/react';
 
 const steps = [
   {
@@ -205,7 +205,7 @@ const Step = ({ title, description, inclusions, children }) => {
 };
 
 const ProessSteps = () => {
-      const posthog = usePostHog();
+      // const posthog = usePostHog();
   
   return (
     <div>
@@ -382,7 +382,7 @@ const ProessSteps = () => {
                 inclusions={step.inclusions}
                 imageUrl={step.imageUrl}
               >
-                {step?.number === 1 && (
+                {/* {step?.number === 1 && (
                   <a
                     href="https://calendly.com/kuvi-networks/explore-kuvi-networks"
                     target="_blank"
@@ -394,7 +394,7 @@ const ProessSteps = () => {
                  >
                     Schedule your free consultation
                   </a>
-                )}
+                )} */}
               </Step>
             </div>
           </div>

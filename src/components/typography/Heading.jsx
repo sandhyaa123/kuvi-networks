@@ -7,7 +7,7 @@ const Heading = ({
      styleCss,
      }) => (
         
-    <p className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight  ${styleCss} ${color}`}>
+    <p className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight  ${styleCss} ${color}`}>
    {children}
   </p>
 );

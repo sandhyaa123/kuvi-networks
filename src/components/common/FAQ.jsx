@@ -6,7 +6,7 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: "ow are you different than outsourcing agencies?",
+      question: "How are you different than outsourcing agencies?",
       answer:
         "You get your own team with your policies and control. We charge a fixed monthly service fee, while all other costs, including team salaries, are transparently passed on to you without any markup.",
     },
