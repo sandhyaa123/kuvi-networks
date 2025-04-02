@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
-import { Home, HowItWorksPage, JoinUs, Services, WhyChooseUs, ErrorPage } from "./pages";
+import { Home, HowItWorksPage, JoinUs, Services, WhyChooseUs, ErrorPage, PrivacyPolicy } from "./pages";
 import "./App.css";
 
 const App = () => {
@@ -16,6 +16,7 @@ const App = () => {
           <Route path="/join-us" element={<JoinUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/how-it-works" element={<HowItWorksPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>

@@ -4,6 +4,8 @@ import JoinUs from "./joinUs";
 import ErrorPage from "./ErorrPage";
 import HowItWorksPage from "./howItWorks";
 import WhyChooseUs from "./whyUs";
+import PrivacyPolicy from "./privacyPolicy";
+
 export {
     Home,
     WhyChooseUs,
@@ -11,4 +13,5 @@ export {
     Services,
     JoinUs,
     ErrorPage,
+    PrivacyPolicy,
 }
