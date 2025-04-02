@@ -102,6 +102,14 @@ const Navbar = () => {
           >
             Join us
           </Link>
+
+          <Link 
+            to="/privacy-policy" 
+            className="text-indigo-900 px-4 py-2 text-[1.2rem] md:text-base md:font-semibold hover:bg-indigo-500 hover:rounded-md hover:text-indigo-50 transition duration-200"
+            onClick={handleMenuItemClick}
+          >
+            Privacy Policy
+          </Link>
           <a
             href="https://calendly.com/kuvi-networks/explore-kuvi-networks"  
             target="_blank"
